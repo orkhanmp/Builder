@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/00.Core/">
+    <Project Path="00.Core/Core/Core.csproj" />
+  </Folder>
+  <Folder Name="/01.Entities/">
+    <Project Path="01.Entities/Entities/Entities.csproj" />
+  </Folder>
+  <Folder Name="/02.DAL/">
+    <Project Path="02.DAL/DAL/DAL.csproj" />
+  </Folder>
+  <Folder Name="/03.BLL/">
+    <Project Path="03.BLL/BLL/BLL.csproj" />
+  </Folder>
+</Solution>
