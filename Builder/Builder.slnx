@@ -11,4 +11,5 @@
   <Folder Name="/03.BLL/">
     <Project Path="03.BLL/BLL/BLL.csproj" />
   </Folder>
+  <Project Path="BuilderMVC/BuilderMVC.csproj" Id="dea2b07a-a7c4-4f6f-b252-ab84c2c6d310" />
 </Solution>

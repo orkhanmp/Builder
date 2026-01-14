@@ -1,0 +1,91 @@
+﻿@inject ISiteSettingsService _siteSettingsService
+@{
+    var settings = _siteSettingsService.GetCurrentSettings();
+    var siteSettings = settings?.Data;
+}
+
+<div class="footer wow fadeIn" data-wow-delay="0.3s">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-contact">
+                    <h2>Office Contact</h2>
+                    <p><i class="fa fa-map-marker-alt"></i>@(siteSettings?.Address ?? "123 Street, New York, USA")</p>
+                    <p><i class="fa fa-phone-alt"></i>@(siteSettings?.Phone ?? "+012 345 67890")</p>
+                    <p><i class="fa fa-envelope"></i>@(siteSettings?.Email ?? "info@example.com")</p>
+                    <div class="footer-social">
+                        @if (!string.IsNullOrEmpty(siteSettings?.TwitterUrl))
+                        {
+                            <a href="@siteSettings.TwitterUrl"><i class="fab fa-twitter"></i></a>
+                        }
+                        @if (!string.IsNullOrEmpty(siteSettings?.FacebookUrl))
+                        {
+                            <a href="@siteSettings.FacebookUrl"><i class="fab fa-facebook-f"></i></a>
+                        }
+                        @if (!string.IsNullOrEmpty(siteSettings?.YouTubeUrl))
+                        {
+                            <a href="@siteSettings.YouTubeUrl"><i class="fab fa-youtube"></i></a>
+                        }
+                        @if (!string.IsNullOrEmpty(siteSettings?.InstagramUrl))
+                        {
+                            <a href="@siteSettings.InstagramUrl"><i class="fab fa-instagram"></i></a>
+                        }
+                        @if (!string.IsNullOrEmpty(siteSettings?.LinkedInUrl))
+                        {
+                            <a href="@siteSettings.LinkedInUrl"><i class="fab fa-linkedin-in"></i></a>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-link">
+                    <h2>Services Areas</h2>
+                    <a asp-controller="Service" asp-action="Index">Building Construction</a>
+                    <a asp-controller="Service" asp-action="Index">House Renovation</a>
+                    <a asp-controller="Service" asp-action="Index">Architecture Design</a>
+                    <a asp-controller="Service" asp-action="Index">Interior Design</a>
+                    <a asp-controller="Service" asp-action="Index">Painting</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="footer-link">
+                    <h2>Useful Pages</h2>
+                    <a asp-controller="About" asp-action="Index">About Us</a>
+                    <a asp-controller="Contact" asp-action="Index">Contact Us</a>
+                    <a asp-controller="Team" asp-action="Index">Our Team</a>
+                    <a asp-controller="Project" asp-action="Index">Projects</a>
+                    <a asp-controller="Blog" asp-action="Index">Blog</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="newsletter">
+                    <h2>Newsletter</h2>
+                    <p>Subscribe to our newsletter for latest updates and news</p>
+                    <div class="form">
+                        <input class="form-control" placeholder="Email here">
+                        <button class="btn">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container footer-menu">
+        <div class="f-menu">
+            <a href="#">Terms of use</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Cookies</a>
+            <a href="#">Help</a>
+            <a href="#">FQAs</a>
+        </div>
+    </div>
+    <div class="container copyright">
+        <div class="row">
+            <div class="col-md-6">
+                <p>&copy; <a href="#">@(siteSettings?.CompanyName ?? "Builderz")</a>, All Right Reserved.</p>
+            </div>
+            <div class="col-md-6">
+                <p>Designed By <a href="#">Your Company</a></p>
+            </div>
+        </div>
+    </div>
+</div>

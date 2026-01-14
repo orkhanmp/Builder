@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\02.dal\\dal\\database\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|solutionrelative:02.dal\\dal\\database\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\03.bll\\bll\\concrete\\homeslidermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|solutionrelative:03.bll\\bll\\concrete\\homeslidermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\buildermvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|solutionrelative:buildermvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\02.dal\\dal\\migrations\\20260114083314_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|solutionrelative:02.dal\\dal\\migrations\\20260114083314_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +35,58 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeSliderManager.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\HomeSliderManager.cs",
+              "RelativeDocumentMoniker": "03.BLL\\BLL\\Concrete\\HomeSliderManager.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\HomeSliderManager.cs",
+              "RelativeToolTip": "03.BLL\\BLL\\Concrete\\HomeSliderManager.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAcwFsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T08:34:47.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Program.cs",
+              "RelativeDocumentMoniker": "BuilderMVC\\Program.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Program.cs",
+              "RelativeToolTip": "BuilderMVC\\Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T08:38:04.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Database\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "02.DAL\\DAL\\Database\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Database\\ApplicationDbContext.cs",
+              "RelativeToolTip": "02.DAL\\DAL\\Database\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T08:36:08.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20260114083314_Initial.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Migrations\\20260114083314_Initial.cs",
+              "RelativeDocumentMoniker": "02.DAL\\DAL\\Migrations\\20260114083314_Initial.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Migrations\\20260114083314_Initial.cs",
+              "RelativeToolTip": "02.DAL\\DAL\\Migrations\\20260114083314_Initial.cs",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T08:33:14.955Z",
+              "EditorCaption": ""
             }
           ]
         }
