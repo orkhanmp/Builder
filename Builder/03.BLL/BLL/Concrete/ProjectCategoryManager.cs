@@ -89,50 +89,31 @@ namespace BLL.Concrete
             return new SuccessDataResult<List<ProjectCategoryDto>>(_mapper.Map<List<ProjectCategoryDto>>(projectCategories));
         }
 
-        public IDataResult<ProjectCategoryDetailDto> GetByIdWithProjects(int id)
+       public IDataResult<ProjectCategoryDetailDto> GetByIdWithProjects(int id)
         {
-            using (ApplicationDbContext context = new())
-            {
-                var projectCategory = context.ProjectCategories
-                    .Include(x => x.Projects.Where(p => p.Deleted == 0))
-                    .FirstOrDefault(x => x.Id == id && x.Deleted == 0);
+            var projectCategory = _projectCategoryDal.GetByIdWithProjects(id);
 
-                if (projectCategory is null)
-                    return new ErrorDataResult<ProjectCategoryDetailDto>("Project category not found");
+            if (projectCategory is null)
+                return new ErrorDataResult<ProjectCategoryDetailDto>("Project category not found");
 
-                return new SuccessDataResult<ProjectCategoryDetailDto>(_mapper.Map<ProjectCategoryDetailDto>(projectCategory));
-            }
+            return new SuccessDataResult<ProjectCategoryDetailDto>(_mapper.Map<ProjectCategoryDetailDto>(projectCategory));
         }
 
         public IDataResult<List<ProjectCategoryDetailDto>> GetAllWithProjects()
         {
-            using (ApplicationDbContext context = new())
-            {
-                var projectCategories = context.ProjectCategories
-                    .Include(x => x.Projects.Where(p => p.Deleted == 0))
-                    .Where(x => x.Deleted == 0)
-                    .ToList();
-
-                return new SuccessDataResult<List<ProjectCategoryDetailDto>>(_mapper.Map<List<ProjectCategoryDetailDto>>(projectCategories));
-            }
+            var projectCategories = _projectCategoryDal.GetAllWithProjects();
+            return new SuccessDataResult<List<ProjectCategoryDetailDto>>(_mapper.Map<List<ProjectCategoryDetailDto>>(projectCategories));
         }
 
         public IDataResult<List<ProjectCategoryDetailDto>> GetActiveWithProjects()
         {
-            using (ApplicationDbContext context = new())
-            {
-                var projectCategories = context.ProjectCategories
-                    .Include(x => x.Projects.Where(p => p.IsActive && p.Deleted == 0))
-                    .Where(x => x.IsActive && x.Deleted == 0)
-                    .ToList();
-
-                return new SuccessDataResult<List<ProjectCategoryDetailDto>>(_mapper.Map<List<ProjectCategoryDetailDto>>(projectCategories));
-            }
+            var projectCategories = _projectCategoryDal.GetActiveWithProjects();
+            return new SuccessDataResult<List<ProjectCategoryDetailDto>>(_mapper.Map<List<ProjectCategoryDetailDto>>(projectCategories));
         }
 
         private IResult DuplicateProjectCategoryName(ProjectCategory projectCategory)
         {
-            var categoryName = _projectCategoryDal.Get(x => x.Name == projectCategory.Name && x.Id != projectCategory.Id && x.IsActive && x.Deleted == 0);
+            var categoryName = _projectCategoryDal.Get(x => x.Name == projectCategory.Name && x.Id != projectCategory.Id && x.Deleted == 0);
             if (categoryName is not null)
             {
                 return new ErrorResult("Duplicate project category name");

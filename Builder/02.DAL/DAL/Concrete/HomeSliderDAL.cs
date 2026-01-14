@@ -13,21 +13,25 @@ namespace DAL.Concrete
 {
     public class HomeSliderDAL : BaseRepository<HomeSlider, ApplicationDbContext>, IHomeSliderDAL
     {
+        private readonly ApplicationDbContext _context;
+        public HomeSliderDAL(ApplicationDbContext context) : base(context)
+        {
+            _context = context;
+        }
+
         public List<HomeSlider> GetActiveSliders()
         {
-            return GetAll(x => x.IsActive);
+            
+            return GetAll(x => x.IsActive && x.Deleted == 0);
         }
 
         public List<HomeSlider> GetByDisplayOrder()
         {
-            using (ApplicationDbContext context = new())
-            {
-                return context.HomeSliders
-                    .Where(x => x.IsActive)
-                    .OrderBy(x => x.Order)
-                    .ToList();
-            }
+            
+            return _context.HomeSliders
+                .Where(x => x.IsActive && x.Deleted == 0)
+                .OrderBy(x => x.Order)
+                .ToList();
         }
     }
-
 }

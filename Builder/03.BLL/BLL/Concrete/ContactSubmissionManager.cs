@@ -75,59 +75,31 @@ namespace BLL.Concrete
 
         public IDataResult<List<ContactSubmissionDto>> GetUnread()
         {
-            var contactSubmissions = _contactSubmissionDal.GetAll(x => !x.IsRead && x.Deleted == 0);
+            var contactSubmissions = _contactSubmissionDal.GetUnread();
             return new SuccessDataResult<List<ContactSubmissionDto>>(_mapper.Map<List<ContactSubmissionDto>>(contactSubmissions));
         }
 
         public IDataResult<List<ContactSubmissionDto>> GetByDateRange(DateTime startDate, DateTime endDate)
         {
-            using (ApplicationDbContext context = new())
-            {
-                var contactSubmissions = context.ContactSubmissions
-                    .Where(x => x.SubmittedDate >= startDate && x.SubmittedDate <= endDate && x.Deleted == 0)
-                    .OrderByDescending(x => x.SubmittedDate)
-                    .ToList();
-
-                return new SuccessDataResult<List<ContactSubmissionDto>>(_mapper.Map<List<ContactSubmissionDto>>(contactSubmissions));
-            }
+            var contactSubmissions = _contactSubmissionDal.GetByDateRange(startDate, endDate);
+            return new SuccessDataResult<List<ContactSubmissionDto>>(_mapper.Map<List<ContactSubmissionDto>>(contactSubmissions));
         }
 
         public IResult MarkAsRead(int id)
-        {
-            var contactSubmission = _contactSubmissionDal.Get(x => x.Id == id && x.Deleted == 0);
-            if (contactSubmission is null)
-                return new ErrorResult("Contact submission not found");
+        {            
+            var exist = _contactSubmissionDal.Get(x => x.Id == id && x.Deleted == 0);
+            if (exist == null) return new ErrorResult("Contact submission not found");
 
-            using (ApplicationDbContext context = new())
-            {
-                var submission = context.ContactSubmissions.Find(id);
-                if (submission != null)
-                {
-                    submission.IsRead = true;
-                    context.SaveChanges();
-                }
-            }
-
+            _contactSubmissionDal.MarkAsRead(id);
             return new SuccessResult("Marked as read");
         }
 
         public IResult MarkAsReplied(int id)
         {
-            var contactSubmission = _contactSubmissionDal.Get(x => x.Id == id && x.Deleted == 0);
-            if (contactSubmission is null)
-                return new ErrorResult("Contact submission not found");
+            var exist = _contactSubmissionDal.Get(x => x.Id == id && x.Deleted == 0);
+            if (exist == null) return new ErrorResult("Contact submission not found");
 
-            using (ApplicationDbContext context = new())
-            {
-                var submission = context.ContactSubmissions.Find(id);
-                if (submission != null)
-                {
-                    submission.IsReplied = true;
-                    submission.IsRead = true;
-                    context.SaveChanges();
-                }
-            }
-
+            _contactSubmissionDal.MarkAsReplied(id);
             return new SuccessResult("Marked as replied");
         }
     }

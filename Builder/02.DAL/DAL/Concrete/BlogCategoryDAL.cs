@@ -13,45 +13,41 @@ namespace DAL.Concrete
 {
     public class BlogCategoryDAL : BaseRepository<BlogCategory, ApplicationDbContext>, IBlogCategoryDAL
     {
+        
+        private readonly ApplicationDbContext _context;
+        public BlogCategoryDAL(ApplicationDbContext context) : base(context)
+        {
+            _context = context;
+        }
+
         public BlogCategory GetByIdWithPosts(int id)
         {
-            using (ApplicationDbContext context = new())
-            {
-                return context.BlogCategories
-                    .Include(x => x.BlogPosts)
-                    .FirstOrDefault(x => x.Id == id);
-            }
+            return _context.BlogCategories
+                .Include(x => x.BlogPosts.Where(p => p.Deleted == 0))
+                .FirstOrDefault(x => x.Id == id && x.Deleted == 0);
         }
 
         public BlogCategory GetBySlugWithPosts(string slug)
         {
-            using (ApplicationDbContext context = new())
-            {
-                return context.BlogCategories
-                    .Include(x => x.BlogPosts.Where(p => p.IsPublished))
-                    .FirstOrDefault(x => x.Slug == slug);
-            }
+            return _context.BlogCategories
+                .Include(x => x.BlogPosts.Where(p => p.IsPublished && p.Deleted == 0))
+                .FirstOrDefault(x => x.Slug == slug && x.Deleted == 0);
         }
 
         public List<BlogCategory> GetAllWithPosts()
         {
-            using (ApplicationDbContext context = new())
-            {
-                return context.BlogCategories
-                    .Include(x => x.BlogPosts)
-                    .ToList();
-            }
+            return _context.BlogCategories
+                .Include(x => x.BlogPosts.Where(p => p.Deleted == 0))
+                .Where(x => x.Deleted == 0)
+                .ToList();
         }
 
         public List<BlogCategory> GetActiveWithPosts()
         {
-            using (ApplicationDbContext context = new())
-            {
-                return context.BlogCategories
-                    .Include(x => x.BlogPosts.Where(p => p.IsPublished))
-                    .Where(x => x.IsActive)
-                    .ToList();
-            }
+            return _context.BlogCategories
+                .Include(x => x.BlogPosts.Where(p => p.IsPublished && p.Deleted == 0))
+                .Where(x => x.IsActive && x.Deleted == 0)
+                .ToList();
         }
     }
 }

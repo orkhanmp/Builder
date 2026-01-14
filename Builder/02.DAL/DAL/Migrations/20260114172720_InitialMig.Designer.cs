@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260114083314_Initial")]
-    partial class Initial
+    [Migration("20260114172720_InitialMig")]
+    partial class InitialMig
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -1121,7 +1121,7 @@ namespace DAL.Migrations
                     b.HasOne("Entities.TableModels.Content.ServiceCategory", "ServiceCategory")
                         .WithMany("Services")
                         .HasForeignKey("ServiceCategoryId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("ServiceCategory");
                 });
@@ -1131,7 +1131,7 @@ namespace DAL.Migrations
                     b.HasOne("Entities.TableModels.Content.TeamCategory", "TeamCategory")
                         .WithMany("TeamMembers")
                         .HasForeignKey("TeamCategoryId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("TeamCategory");
                 });
@@ -1141,7 +1141,7 @@ namespace DAL.Migrations
                     b.HasOne("Entities.TableModels.Membership.AppRole", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 
@@ -1150,7 +1150,7 @@ namespace DAL.Migrations
                     b.HasOne("Entities.TableModels.Membership.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 
@@ -1159,7 +1159,7 @@ namespace DAL.Migrations
                     b.HasOne("Entities.TableModels.Membership.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 
@@ -1168,13 +1168,13 @@ namespace DAL.Migrations
                     b.HasOne("Entities.TableModels.Membership.AppRole", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Entities.TableModels.Membership.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 
@@ -1183,7 +1183,7 @@ namespace DAL.Migrations
                     b.HasOne("Entities.TableModels.Membership.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 

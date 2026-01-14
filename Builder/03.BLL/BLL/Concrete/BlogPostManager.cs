@@ -102,46 +102,26 @@ namespace BLL.Concrete
 
         public IDataResult<BlogPostDetailDto> GetBySlug(string slug)
         {
-            using (ApplicationDbContext context = new())
-            {
-                var blogPost = context.BlogPosts
-                    .Include(x => x.BlogCategory)
-                    .FirstOrDefault(x => x.Slug == slug && x.Deleted == 0);
+            var blogPost = _blogPostDal.GetBySlug(slug);
+            if (blogPost is null)
+                return new ErrorDataResult<BlogPostDetailDto>("Blog post not found");
 
-                if (blogPost is null)
-                    return new ErrorDataResult<BlogPostDetailDto>("Blog post not found");
-
-                return new SuccessDataResult<BlogPostDetailDto>(_mapper.Map<BlogPostDetailDto>(blogPost));
-            }
+            return new SuccessDataResult<BlogPostDetailDto>(_mapper.Map<BlogPostDetailDto>(blogPost));
         }
 
         public IDataResult<BlogPostDetailDto> GetByIdWithCategory(int id)
         {
-            using (ApplicationDbContext context = new())
-            {
-                var blogPost = context.BlogPosts
-                    .Include(x => x.BlogCategory)
-                    .FirstOrDefault(x => x.Id == id && x.Deleted == 0);
+            var blogPost = _blogPostDal.GetByIdWithCategory(id);
+            if (blogPost is null)
+                return new ErrorDataResult<BlogPostDetailDto>("Blog post not found");
 
-                if (blogPost is null)
-                    return new ErrorDataResult<BlogPostDetailDto>("Blog post not found");
-
-                return new SuccessDataResult<BlogPostDetailDto>(_mapper.Map<BlogPostDetailDto>(blogPost));
-            }
+            return new SuccessDataResult<BlogPostDetailDto>(_mapper.Map<BlogPostDetailDto>(blogPost));
         }
 
         public IDataResult<List<BlogPostDto>> GetAllWithCategory()
         {
-            using (ApplicationDbContext context = new())
-            {
-                var blogPosts = context.BlogPosts
-                    .Include(x => x.BlogCategory)
-                    .Where(x => x.Deleted == 0)
-                    .OrderByDescending(x => x.PublishDate)
-                    .ToList();
-
-                return new SuccessDataResult<List<BlogPostDto>>(_mapper.Map<List<BlogPostDto>>(blogPosts));
-            }
+            var blogPosts = _blogPostDal.GetAllWithCategory();
+            return new SuccessDataResult<List<BlogPostDto>>(_mapper.Map<List<BlogPostDto>>(blogPosts));
         }
 
         public IDataResult<List<BlogPostDto>> GetPublishedPosts()
@@ -152,30 +132,15 @@ namespace BLL.Concrete
 
         public IDataResult<List<BlogPostDto>> GetRecentPosts(int count)
         {
-            using (ApplicationDbContext context = new())
-            {
-                var blogPosts = context.BlogPosts
-                    .Where(x => x.IsPublished && x.Deleted == 0)
-                    .OrderByDescending(x => x.PublishDate)
-                    .Take(count)
-                    .ToList();
-
-                return new SuccessDataResult<List<BlogPostDto>>(_mapper.Map<List<BlogPostDto>>(blogPosts));
-            }
+            var blogPosts = _blogPostDal.GetRecentPosts(count);
+            return new SuccessDataResult<List<BlogPostDto>>(_mapper.Map<List<BlogPostDto>>(blogPosts));
         }
 
         public IResult IncrementViewCount(int id)
         {
-            using (ApplicationDbContext context = new())
-            {
-                var post = context.BlogPosts.FirstOrDefault(x => x.Id == id && x.Deleted == 0);
-                if (post is null)
-                    return new ErrorResult("Blog post not found");
-
-                post.ViewCount++;
-                context.SaveChanges();
-                return new SuccessResult("View count incremented");
-            }
+            
+            _blogPostDal.IncrementViewCount(id);
+            return new SuccessResult("View count incremented");
         }
 
         public IDataResult<List<BlogPostDto>> Search(string searchTerm)
@@ -183,16 +148,8 @@ namespace BLL.Concrete
             if (string.IsNullOrWhiteSpace(searchTerm))
                 return new ErrorDataResult<List<BlogPostDto>>("Search term cannot be empty");
 
-            using (ApplicationDbContext context = new())
-            {
-                var blogPosts = context.BlogPosts
-                    .Where(x => x.IsPublished && x.Deleted == 0 &&
-                        (x.Title.Contains(searchTerm) || x.Summary.Contains(searchTerm)))
-                    .OrderByDescending(x => x.PublishDate)
-                    .ToList();
-
-                return new SuccessDataResult<List<BlogPostDto>>(_mapper.Map<List<BlogPostDto>>(blogPosts));
-            }
+            var blogPosts = _blogPostDal.Search(searchTerm);
+            return new SuccessDataResult<List<BlogPostDto>>(_mapper.Map<List<BlogPostDto>>(blogPosts));
         }
 
         private IResult DuplicateBlogPostTitle(BlogPost blogPost)

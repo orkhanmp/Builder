@@ -1,5 +1,59 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<ServiceDto>
 @{
+    ViewBag.Title = "Our Services";
+    var banner = ViewBag.Banner as PageBannerDto;
 }
+
+<!-- Page Header Start -->
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>@(banner?.Title ?? "Our Services")</h2>
+            </div>
+            <div class="col-12">
+                <a asp-controller="Home" asp-action="Index">Home</a>
+                <a href="">@(banner?.Title ?? "Services")</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+<!-- Service Start -->
+<div class="service">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>Our Services</p>
+            <h2>We Provide Services</h2>
+        </div>
+        @if (Model != null && Model.Any())
+        {
+            <div class="row">
+                @foreach (var service in Model)
+                {
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="~/@service.ImageUrl" alt="@service.Title">
+                                <div class="service-overlay">
+                                    <p>@service.ShortDescription</p>
+                                </div>
+                            </div>
+                            <div class="service-text">
+                                <h3>@service.Title</h3>
+                                <a class="btn" asp-controller="Service" asp-action="Detail" asp-route-id="@service.Id">+</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-info text-center">
+                <h4>No services available at the moment.</h4>
+            </div>
+        }
+    </div>
+</div>
+<!-- Service End -->

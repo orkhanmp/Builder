@@ -14,7 +14,7 @@ namespace DAL.Database
     {
         public ApplicationDbContext()
         {
-
+            
         }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options): base(options)
         {            
@@ -33,12 +33,18 @@ namespace DAL.Database
         public DbSet<ContactSubmission> ContactSubmissions { get; set; }
         public DbSet<SiteSettings> SiteSettings { get; set; }
         public DbSet<PageBanner> PageBanners { get; set; }
+       
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+
+            
+            foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
+            {
+                relationship.DeleteBehavior = DeleteBehavior.Restrict;
+            }
             
             modelBuilder.Entity<AppUser>().ToTable("Users");
             modelBuilder.Entity<AppRole>().ToTable("Roles");
@@ -47,6 +53,16 @@ namespace DAL.Database
             modelBuilder.Entity<AppUserLogin>().ToTable("UserLogins");
             modelBuilder.Entity<AppRoleClaim>().ToTable("RoleClaims");
             modelBuilder.Entity<AppUserToken>().ToTable("UserTokens");
+
         }
+
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    if (!optionsBuilder.IsConfigured)
+        //    {
+                
+        //        optionsBuilder.UseSqlServer("Server=localhost;Database=BuilderDb;Trusted_Connection=True;TrustServerCertificate=true");
+        //    }
+        //}
     }
 }

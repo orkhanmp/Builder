@@ -13,35 +13,33 @@ namespace DAL.Concrete
 {
     public class ProjectCategoryDAL : BaseRepository<ProjectCategory, ApplicationDbContext>, IProjectCategoryDAL
     {
+        private readonly ApplicationDbContext _context;
+        public ProjectCategoryDAL(ApplicationDbContext context) : base(context)
+        {
+            _context = context;
+        }
+
         public ProjectCategory GetByIdWithProjects(int id)
         {
-            using (ApplicationDbContext context = new())
-            {
-                return context.ProjectCategories
-                    .Include(x => x.Projects)
-                    .FirstOrDefault(x => x.Id == id);
-            }
+            return _context.ProjectCategories
+                .Include(x => x.Projects.Where(p => p.Deleted == 0))
+                .FirstOrDefault(x => x.Id == id && x.Deleted == 0);
         }
 
         public List<ProjectCategory> GetAllWithProjects()
         {
-            using (ApplicationDbContext context = new())
-            {
-                return context.ProjectCategories
-                    .Include(x => x.Projects)
-                    .ToList();
-            }
+            return _context.ProjectCategories
+                .Include(x => x.Projects.Where(p => p.Deleted == 0))
+                .Where(x => x.Deleted == 0)
+                .ToList();
         }
 
         public List<ProjectCategory> GetActiveWithProjects()
         {
-            using (ApplicationDbContext context = new())
-            {
-                return context.ProjectCategories
-                    .Include(x => x.Projects.Where(p => p.IsActive))
-                    .Where(x => x.IsActive)
-                    .ToList();
-            }
+            return _context.ProjectCategories
+                .Include(x => x.Projects.Where(p => p.IsActive && p.Deleted == 0))
+                .Where(x => x.IsActive && x.Deleted == 0)
+                .ToList();
         }
     }
 }

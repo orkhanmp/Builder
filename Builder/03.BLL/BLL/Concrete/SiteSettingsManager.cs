@@ -20,6 +20,7 @@ namespace BLL.Concrete
     {
         private readonly ISiteSettingsDAL _siteSettingsDal;
         private readonly IMapper _mapper;
+
         public SiteSettingsManager(ISiteSettingsDAL siteSettingsDal, IMapper mapper)
         {
             _siteSettingsDal = siteSettingsDal;
@@ -48,15 +49,13 @@ namespace BLL.Concrete
         }
 
         public IDataResult<SiteSettingsDto> GetCurrentSettings()
-        {
-            using (ApplicationDbContext context = new())
-            {
-                var siteSettings = context.SiteSettings.FirstOrDefault(x => x.Deleted == 0);
-                if (siteSettings is null)
-                    return new ErrorDataResult<SiteSettingsDto>("Site settings not found");
+        {            
+            var siteSettings = _siteSettingsDal.GetCurrentSettings();
 
-                return new SuccessDataResult<SiteSettingsDto>(_mapper.Map<SiteSettingsDto>(siteSettings));
-            }
+            if (siteSettings is null)
+                return new ErrorDataResult<SiteSettingsDto>("Site settings not found");
+
+            return new SuccessDataResult<SiteSettingsDto>(_mapper.Map<SiteSettingsDto>(siteSettings));
         }
     }
 }

@@ -12,46 +12,44 @@ namespace DAL.Concrete
 {
     public class ContactSubmissionDAL : BaseRepository<ContactSubmission, ApplicationDbContext>, IContactSubmissionDAL
     {
+        private readonly ApplicationDbContext _context;
+        public ContactSubmissionDAL(ApplicationDbContext context) : base(context)
+        {
+            _context = context;
+        }
+
         public List<ContactSubmission> GetUnread()
         {
-            return GetAll(x => !x.IsRead);
+            
+            return GetAll(x => !x.IsRead && x.Deleted == 0);
         }
 
         public List<ContactSubmission> GetByDateRange(DateTime startDate, DateTime endDate)
         {
-            using (ApplicationDbContext context = new())
-            {
-                return context.ContactSubmissions
-                    .Where(x => x.SubmittedDate >= startDate && x.SubmittedDate <= endDate)
-                    .OrderByDescending(x => x.SubmittedDate)
-                    .ToList();
-            }
+            return _context.ContactSubmissions
+                .Where(x => x.SubmittedDate >= startDate && x.SubmittedDate <= endDate && x.Deleted == 0)
+                .OrderByDescending(x => x.SubmittedDate)
+                .ToList();
         }
 
         public void MarkAsRead(int id)
         {
-            using (ApplicationDbContext context = new())
+            var submission = _context.ContactSubmissions.FirstOrDefault(x => x.Id == id && x.Deleted == 0);
+            if (submission != null)
             {
-                var submission = context.ContactSubmissions.Find(id);
-                if (submission != null)
-                {
-                    submission.IsRead = true;
-                    context.SaveChanges();
-                }
+                submission.IsRead = true;
+                _context.SaveChanges();
             }
         }
 
         public void MarkAsReplied(int id)
         {
-            using (ApplicationDbContext context = new())
+            var submission = _context.ContactSubmissions.FirstOrDefault(x => x.Id == id && x.Deleted == 0);
+            if (submission != null)
             {
-                var submission = context.ContactSubmissions.Find(id);
-                if (submission != null)
-                {
-                    submission.IsReplied = true;
-                    submission.IsRead = true;
-                    context.SaveChanges();
-                }
+                submission.IsReplied = true;
+                submission.IsRead = true;
+                _context.SaveChanges();
             }
         }
     }

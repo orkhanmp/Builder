@@ -13,6 +13,11 @@ namespace DAL.Concrete
 {
     public class BlogPostDAL : BaseRepository<BlogPost, ApplicationDbContext>, IBlogPostDAL
     {
+        private readonly ApplicationDbContext _context;
+        public BlogPostDAL(ApplicationDbContext _context) : base(_context)
+        {
+            this._context = _context;
+        }
         public List<BlogPost> GetByCategoryId(int categoryId)
         {
             return GetAll(x => x.BlogCategoryId == categoryId);
@@ -20,28 +25,28 @@ namespace DAL.Concrete
 
         public BlogPost GetBySlug(string slug)
         {
-            return Get(x => x.Slug == slug);
+            return _context.BlogPosts
+                .Include(x => x.BlogCategory)
+                .FirstOrDefault(x => x.Slug == slug && x.Deleted == 0);
         }
 
         public BlogPost GetByIdWithCategory(int id)
         {
-            using (ApplicationDbContext context = new())
-            {
-                return context.BlogPosts
-                    .Include(x => x.BlogCategory)
-                    .FirstOrDefault(x => x.Id == id);
-            }
+
+            return _context.BlogPosts
+            .Include(x => x.BlogCategory)
+            .FirstOrDefault(x => x.Id == id && x.Deleted == 0);
+
         }
 
         public List<BlogPost> GetAllWithCategory()
         {
-            using (ApplicationDbContext context = new())
-            {
-                return context.BlogPosts
-                    .Include(x => x.BlogCategory)
-                    .OrderByDescending(x => x.PublishDate)
-                    .ToList();
-            }
+
+            return _context.BlogPosts
+            .Include(x => x.BlogCategory)
+            .Where(x => x.Deleted == 0)
+            .OrderByDescending(x => x.PublishDate)
+            .ToList();
         }
 
         public List<BlogPost> GetPublishedPosts()
@@ -51,39 +56,35 @@ namespace DAL.Concrete
 
         public List<BlogPost> GetRecentPosts(int count)
         {
-            using (ApplicationDbContext context = new())
-            {
-                return context.BlogPosts
-                    .Where(x => x.IsPublished)
-                    .OrderByDescending(x => x.PublishDate)
-                    .Take(count)
-                    .ToList();
-            }
+
+            return _context.BlogPosts
+            .Where(x => x.IsPublished && x.Deleted == 0)
+            .OrderByDescending(x => x.PublishDate)
+            .Take(count)
+            .ToList();  
         }
 
         public void IncrementViewCount(int id)
         {
-            using (ApplicationDbContext context = new())
+
+            var post = _context.BlogPosts.FirstOrDefault(x => x.Id == id && x.Deleted == 0);
+            if (post != null)
             {
-                var post = context.BlogPosts.Find(id);
-                if (post != null)
-                {
-                    post.ViewCount++;
-                    context.SaveChanges();
-                }
+                post.ViewCount++;
+                _context.SaveChanges();
             }
+
         }
 
         public List<BlogPost> Search(string searchTerm)
         {
-            using (ApplicationDbContext context = new())
-            {
-                return context.BlogPosts
-                    .Where(x => x.IsPublished &&
-                        (x.Title.Contains(searchTerm) || x.Summary.Contains(searchTerm)))
-                    .OrderByDescending(x => x.PublishDate)
-                    .ToList();
-            }
+
+            return _context.BlogPosts
+            .Where(x => x.IsPublished && x.Deleted == 0 &&
+                (x.Title.Contains(searchTerm) || x.Summary.Contains(searchTerm)))
+            .OrderByDescending(x => x.PublishDate)
+            .ToList();
+
         }
     }
 }

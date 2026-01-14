@@ -91,48 +91,29 @@ namespace BLL.Concrete
 
         public IDataResult<TeamCategoryDetailDto> GetByIdWithMembers(int id)
         {
-            using (ApplicationDbContext context = new())
-            {
-                var teamCategory = context.TeamCategories
-                    .Include(x => x.TeamMembers.Where(m => m.Deleted == 0))
-                    .FirstOrDefault(x => x.Id == id && x.Deleted == 0);
+            var teamCategory = _teamCategoryDal.GetByIdWithMembers(id);
 
-                if (teamCategory is null)
-                    return new ErrorDataResult<TeamCategoryDetailDto>("Team category not found");
+            if (teamCategory is null)
+                return new ErrorDataResult<TeamCategoryDetailDto>("Team category not found");
 
-                return new SuccessDataResult<TeamCategoryDetailDto>(_mapper.Map<TeamCategoryDetailDto>(teamCategory));
-            }
+            return new SuccessDataResult<TeamCategoryDetailDto>(_mapper.Map<TeamCategoryDetailDto>(teamCategory));
         }
 
         public IDataResult<List<TeamCategoryDetailDto>> GetAllWithMembers()
         {
-            using (ApplicationDbContext context = new())
-            {
-                var teamCategories = context.TeamCategories
-                    .Include(x => x.TeamMembers.Where(m => m.Deleted == 0))
-                    .Where(x => x.Deleted == 0)
-                    .ToList();
-
-                return new SuccessDataResult<List<TeamCategoryDetailDto>>(_mapper.Map<List<TeamCategoryDetailDto>>(teamCategories));
-            }
+            var teamCategories = _teamCategoryDal.GetAllWithMembers();
+            return new SuccessDataResult<List<TeamCategoryDetailDto>>(_mapper.Map<List<TeamCategoryDetailDto>>(teamCategories));
         }
 
         public IDataResult<List<TeamCategoryDetailDto>> GetActiveWithMembers()
         {
-            using (ApplicationDbContext context = new())
-            {
-                var teamCategories = context.TeamCategories
-                    .Include(x => x.TeamMembers.Where(m => m.IsActive && m.Deleted == 0))
-                    .Where(x => x.IsActive && x.Deleted == 0)
-                    .ToList();
-
-                return new SuccessDataResult<List<TeamCategoryDetailDto>>(_mapper.Map<List<TeamCategoryDetailDto>>(teamCategories));
-            }
+            var teamCategories = _teamCategoryDal.GetActiveWithMembers();
+            return new SuccessDataResult<List<TeamCategoryDetailDto>>(_mapper.Map<List<TeamCategoryDetailDto>>(teamCategories));
         }
 
         private IResult DuplicateTeamCategoryName(TeamCategory teamCategory)
         {
-            var categoryName = _teamCategoryDal.Get(x => x.Name == teamCategory.Name && x.Id != teamCategory.Id && x.IsActive && x.Deleted == 0);
+            var categoryName = _teamCategoryDal.Get(x => x.Name == teamCategory.Name && x.Id != teamCategory.Id && x.Deleted == 0);
             if (categoryName is not null)
             {
                 return new ErrorResult("Duplicate team category name");

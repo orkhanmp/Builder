@@ -1,5 +1,71 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model ServiceDetailDto
 @{
+    ViewBag.Title = Model?.Title ?? "Service Detail";
+    var relatedServices = ViewBag.RelatedServices as List<ServiceDto>;
 }
+
+<!-- Page Header Start -->
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>@Model.Title</h2>
+            </div>
+            <div class="col-12">
+                <a asp-controller="Home" asp-action="Index">Home</a>
+                <a asp-controller="Service" asp-action="Index">Services</a>
+                <a href="">@Model.Title</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+<!-- Service Detail Start -->
+<div class="service">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="service-detail">
+                    <img src="~/@Model.ImageUrl" alt="@Model.Title" class="img-fluid mb-4">
+                    <h2>@Model.Title</h2>
+                    @if (!string.IsNullOrEmpty(Model.ServiceCategoryName))
+                    {
+                        <p class="text-muted"><strong>Category:</strong> @Model.ServiceCategoryName</p>
+                    }
+                    <div class="mt-4">
+                        @Html.Raw(Model.DetailedDescription)
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar">
+                    <div class="sidebar-widget">
+                        <h3>Related Services</h3>
+                        @if (relatedServices != null && relatedServices.Any())
+                        {
+                            <ul class="list-unstyled">
+                                @foreach (var service in relatedServices)
+                                {
+                                    <li class="mb-3">
+                                        <a asp-action="Detail" asp-route-id="@service.Id" class="d-flex align-items-center">
+                                            <img src="~/@service.ImageUrl" alt="@service.Title" style="width: 80px; height: 80px; object-fit: cover; margin-right: 15px;">
+                                            <div>
+                                                <h5>@service.Title</h5>
+                                                <p class="mb-0 text-muted small">@service.ShortDescription</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+                        }
+                    </div>
+                    <div class="sidebar-widget mt-4">
+                        <h3>Need Help?</h3>
+                        <a asp-controller="Contact" asp-action="Index" class="btn btn-primary btn-block">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service Detail End -->

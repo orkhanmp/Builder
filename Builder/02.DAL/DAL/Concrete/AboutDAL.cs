@@ -12,12 +12,16 @@ namespace DAL.Concrete
 {
     public class AboutDAL : BaseRepository<About, ApplicationDbContext>, IAboutDAL
     {
+        private readonly ApplicationDbContext _context;
+        public AboutDAL(ApplicationDbContext _context): base(_context)
+        {
+            this._context = _context;
+        }
         public About GetCurrent()
         {
-            using (ApplicationDbContext context = new())
-            {
-                return context.Abouts.FirstOrDefault();
-            }
+
+            return _context.Abouts.FirstOrDefault(x => x.Deleted == 0);
+
         }
     }
 }

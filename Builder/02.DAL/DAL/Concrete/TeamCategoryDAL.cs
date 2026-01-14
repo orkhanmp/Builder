@@ -13,35 +13,33 @@ namespace DAL.Concrete
 {
     public class TeamCategoryDAL : BaseRepository<TeamCategory, ApplicationDbContext>, ITeamCategoryDAL
     {
+        private readonly ApplicationDbContext _context;
+        public TeamCategoryDAL(ApplicationDbContext context) : base(context)
+        {
+            _context = context;
+        }
+
         public TeamCategory GetByIdWithMembers(int id)
         {
-            using (ApplicationDbContext context = new())
-            {
-                return context.TeamCategories
-                    .Include(x => x.TeamMembers)
-                    .FirstOrDefault(x => x.Id == id);
-            }
+            return _context.TeamCategories
+                .Include(x => x.TeamMembers.Where(m => m.Deleted == 0))
+                .FirstOrDefault(x => x.Id == id && x.Deleted == 0);
         }
 
         public List<TeamCategory> GetAllWithMembers()
         {
-            using (ApplicationDbContext context = new())
-            {
-                return context.TeamCategories
-                    .Include(x => x.TeamMembers)
-                    .ToList();
-            }
+            return _context.TeamCategories
+                .Include(x => x.TeamMembers.Where(m => m.Deleted == 0))
+                .Where(x => x.Deleted == 0)
+                .ToList();
         }
 
         public List<TeamCategory> GetActiveWithMembers()
         {
-            using (ApplicationDbContext context = new())
-            {
-                return context.TeamCategories
-                    .Include(x => x.TeamMembers.Where(m => m.IsActive))
-                    .Where(x => x.IsActive)
-                    .ToList();
-            }
+            return _context.TeamCategories
+                .Include(x => x.TeamMembers.Where(m => m.IsActive && m.Deleted == 0))
+                .Where(x => x.IsActive && x.Deleted == 0)
+                .ToList();
         }
     }
 }

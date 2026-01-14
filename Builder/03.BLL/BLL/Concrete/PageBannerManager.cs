@@ -88,7 +88,9 @@ namespace BLL.Concrete
 
         public IDataResult<PageBannerDto> GetByPageName(string pageName)
         {
-            var pageBanner = _pageBannerDal.Get(x => x.PageName == pageName && x.IsActive && x.Deleted == 0);
+            
+            var pageBanner = _pageBannerDal.GetByPageName(pageName);
+
             if (pageBanner is null)
                 return new ErrorDataResult<PageBannerDto>("Page banner not found");
 

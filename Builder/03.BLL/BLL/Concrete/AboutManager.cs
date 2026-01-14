@@ -81,14 +81,13 @@ namespace BLL.Concrete
 
         public IDataResult<AboutDto> GetCurrent()
         {
-            using (ApplicationDbContext context = new())
-            {
-                var about = context.Abouts.FirstOrDefault(x => x.Deleted == 0); 
-                if (about is null)
+            
+                var about = _aboutDal.GetCurrent();
+            if (about is null)
                     return new ErrorDataResult<AboutDto>("About not found");
 
                 return new SuccessDataResult<AboutDto>(_mapper.Map<AboutDto>(about));
-            }
+            
         }
     }
 }

@@ -95,59 +95,34 @@ namespace BLL.Concrete
         }
 
         public IDataResult<BlogCategoryDetailDto> GetByIdWithPosts(int id)
-        {
-            using (ApplicationDbContext context = new())
-            {
-                var blogCategory = context.BlogCategories
-                    .Include(x => x.BlogPosts.Where(p => p.Deleted == 0))
-                    .FirstOrDefault(x => x.Id == id && x.Deleted == 0);
+        {            
+            var blogCategory = _blogCategoryDal.GetByIdWithPosts(id);
 
-                if (blogCategory is null)
-                    return new ErrorDataResult<BlogCategoryDetailDto>("Blog category not found");
+            if (blogCategory is null)
+                return new ErrorDataResult<BlogCategoryDetailDto>("Blog category not found");
 
-                return new SuccessDataResult<BlogCategoryDetailDto>(_mapper.Map<BlogCategoryDetailDto>(blogCategory));
-            }
+            return new SuccessDataResult<BlogCategoryDetailDto>(_mapper.Map<BlogCategoryDetailDto>(blogCategory));
         }
 
         public IDataResult<BlogCategoryDetailDto> GetBySlugWithPosts(string slug)
         {
-            using (ApplicationDbContext context = new())
-            {
-                var blogCategory = context.BlogCategories
-                    .Include(x => x.BlogPosts.Where(p => p.IsPublished && p.Deleted == 0))
-                    .FirstOrDefault(x => x.Slug == slug && x.Deleted == 0);
+            var blogCategory = _blogCategoryDal.GetBySlugWithPosts(slug);
 
-                if (blogCategory is null)
-                    return new ErrorDataResult<BlogCategoryDetailDto>("Blog category not found");
+            if (blogCategory is null)
+                return new ErrorDataResult<BlogCategoryDetailDto>("Blog category not found");
 
-                return new SuccessDataResult<BlogCategoryDetailDto>(_mapper.Map<BlogCategoryDetailDto>(blogCategory));
-            }
+            return new SuccessDataResult<BlogCategoryDetailDto>(_mapper.Map<BlogCategoryDetailDto>(blogCategory));
         }
 
         public IDataResult<List<BlogCategoryDetailDto>> GetAllWithPosts()
         {
-            using (ApplicationDbContext context = new())
-            {
-                var blogCategories = context.BlogCategories
-                    .Include(x => x.BlogPosts.Where(p => p.Deleted == 0))
-                    .Where(x => x.Deleted == 0)
-                    .ToList();
-
-                return new SuccessDataResult<List<BlogCategoryDetailDto>>(_mapper.Map<List<BlogCategoryDetailDto>>(blogCategories));
-            }
+            var blogCategories = _blogCategoryDal.GetAllWithPosts();
+            return new SuccessDataResult<List<BlogCategoryDetailDto>>(_mapper.Map<List<BlogCategoryDetailDto>>(blogCategories));
         }
-
         public IDataResult<List<BlogCategoryDetailDto>> GetActiveWithPosts()
         {
-            using (ApplicationDbContext context = new())
-            {
-                var blogCategories = context.BlogCategories
-                    .Include(x => x.BlogPosts.Where(p => p.IsPublished && p.Deleted == 0))
-                    .Where(x => x.IsActive && x.Deleted == 0)
-                    .ToList();
-
-                return new SuccessDataResult<List<BlogCategoryDetailDto>>(_mapper.Map<List<BlogCategoryDetailDto>>(blogCategories));
-            }
+            var blogCategories = _blogCategoryDal.GetActiveWithPosts();
+            return new SuccessDataResult<List<BlogCategoryDetailDto>>(_mapper.Map<List<BlogCategoryDetailDto>>(blogCategories));
         }
 
         private IResult DuplicateBlogCategoryName(BlogCategory blogCategory)

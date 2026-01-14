@@ -91,47 +91,35 @@ namespace BLL.Concrete
 
         public IDataResult<List<ServiceDto>> GetByCategoryId(int categoryId)
         {
-            var services = _serviceDal.GetAll(x => x.ServiceCategoryId == categoryId && x.Deleted == 0);
+            var services = _serviceDal.GetByCategoryId(categoryId);
             return new SuccessDataResult<List<ServiceDto>>(_mapper.Map<List<ServiceDto>>(services));
         }
 
         public IDataResult<ServiceDetailDto> GetByIdWithCategory(int id)
         {
-            using (ApplicationDbContext context = new())
-            {
-                var service = context.Services
-                    .Include(x => x.ServiceCategory)
-                    .FirstOrDefault(x => x.Id == id && x.Deleted == 0);
+            var service = _serviceDal.GetByIdWithCategory(id);
 
-                if (service is null)
-                    return new ErrorDataResult<ServiceDetailDto>("Service not found");
+            if (service is null)
+                return new ErrorDataResult<ServiceDetailDto>("Service not found");
 
-                return new SuccessDataResult<ServiceDetailDto>(_mapper.Map<ServiceDetailDto>(service));
-            }
+            return new SuccessDataResult<ServiceDetailDto>(_mapper.Map<ServiceDetailDto>(service));
         }
 
         public IDataResult<List<ServiceDto>> GetAllWithCategory()
         {
-            using (ApplicationDbContext context = new())
-            {
-                var services = context.Services
-                    .Include(x => x.ServiceCategory)
-                    .Where(x => x.Deleted == 0)
-                    .ToList();
-
-                return new SuccessDataResult<List<ServiceDto>>(_mapper.Map<List<ServiceDto>>(services));
-            }
+            var services = _serviceDal.GetAllWithCategory();
+            return new SuccessDataResult<List<ServiceDto>>(_mapper.Map<List<ServiceDto>>(services));
         }
 
         public IDataResult<List<ServiceDto>> GetActiveServices()
         {
-            var services = _serviceDal.GetAll(x => x.IsActive && x.Deleted == 0);
+            var services = _serviceDal.GetActiveServices();
             return new SuccessDataResult<List<ServiceDto>>(_mapper.Map<List<ServiceDto>>(services));
         }
 
         private IResult DuplicateServiceTitle(Service service)
         {
-            var serviceTitle = _serviceDal.Get(x => x.Title == service.Title && x.Id != service.Id && x.IsActive && x.Deleted == 0);
+            var serviceTitle = _serviceDal.Get(x => x.Title == service.Title && x.Id != service.Id && x.Deleted == 0);
             if (serviceTitle is not null)
             {
                 return new ErrorResult("Duplicate service title");

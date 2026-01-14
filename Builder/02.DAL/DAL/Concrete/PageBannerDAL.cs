@@ -12,9 +12,14 @@ namespace DAL.Concrete
 {
     public class PageBannerDAL : BaseRepository<PageBanner, ApplicationDbContext>, IPageBannerDAL
     {
+        private readonly ApplicationDbContext _context;
+        public PageBannerDAL(ApplicationDbContext _context) : base(_context)
+        {
+            this._context = _context;
+        }
         public PageBanner GetByPageName(string pageName)
         {
-            return Get(x => x.PageName == pageName && x.IsActive);
+            return Get(x => x.PageName == pageName && x.IsActive && x.Deleted == 0);
         }
     }
 }

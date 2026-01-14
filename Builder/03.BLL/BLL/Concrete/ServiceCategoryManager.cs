@@ -91,48 +91,29 @@ namespace BLL.Concrete
 
         public IDataResult<ServiceCategoryDetailDto> GetByIdWithServices(int id)
         {
-            using (ApplicationDbContext context = new())
-            {
-                var serviceCategory = context.ServiceCategories
-                    .Include(x => x.Services.Where(s => s.Deleted == 0))
-                    .FirstOrDefault(x => x.Id == id && x.Deleted == 0);
+            var serviceCategory = _serviceCategoryDal.GetByIdWithServices(id);
 
-                if (serviceCategory is null)
-                    return new ErrorDataResult<ServiceCategoryDetailDto>("Service category not found");
+            if (serviceCategory is null)
+                return new ErrorDataResult<ServiceCategoryDetailDto>("Service category not found");
 
-                return new SuccessDataResult<ServiceCategoryDetailDto>(_mapper.Map<ServiceCategoryDetailDto>(serviceCategory));
-            }
+            return new SuccessDataResult<ServiceCategoryDetailDto>(_mapper.Map<ServiceCategoryDetailDto>(serviceCategory));
         }
 
         public IDataResult<List<ServiceCategoryDetailDto>> GetAllWithServices()
         {
-            using (ApplicationDbContext context = new())
-            {
-                var serviceCategories = context.ServiceCategories
-                    .Include(x => x.Services.Where(s => s.Deleted == 0))
-                    .Where(x => x.Deleted == 0)
-                    .ToList();
-
-                return new SuccessDataResult<List<ServiceCategoryDetailDto>>(_mapper.Map<List<ServiceCategoryDetailDto>>(serviceCategories));
-            }
+            var serviceCategories = _serviceCategoryDal.GetAllWithServices();
+            return new SuccessDataResult<List<ServiceCategoryDetailDto>>(_mapper.Map<List<ServiceCategoryDetailDto>>(serviceCategories));
         }
 
         public IDataResult<List<ServiceCategoryDetailDto>> GetActiveWithServices()
         {
-            using (ApplicationDbContext context = new())
-            {
-                var serviceCategories = context.ServiceCategories
-                    .Include(x => x.Services.Where(s => s.IsActive && s.Deleted == 0))
-                    .Where(x => x.IsActive && x.Deleted == 0)
-                    .ToList();
-
-                return new SuccessDataResult<List<ServiceCategoryDetailDto>>(_mapper.Map<List<ServiceCategoryDetailDto>>(serviceCategories));
-            }
+            var serviceCategories = _serviceCategoryDal.GetActiveWithServices();
+            return new SuccessDataResult<List<ServiceCategoryDetailDto>>(_mapper.Map<List<ServiceCategoryDetailDto>>(serviceCategories));
         }
 
         private IResult DuplicateServiceCategoryName(ServiceCategory serviceCategory)
-        {
-            var categoryName = _serviceCategoryDal.Get(x => x.Name == serviceCategory.Name && x.Id != serviceCategory.Id && x.IsActive && x.Deleted == 0);
+        {            
+            var categoryName = _serviceCategoryDal.Get(x => x.Name == serviceCategory.Name && x.Id != serviceCategory.Id && x.Deleted == 0);
             if (categoryName is not null)
             {
                 return new ErrorResult("Duplicate category name");

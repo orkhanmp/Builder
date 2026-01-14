@@ -3,20 +3,200 @@
   "WorkspaceRootPath": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\02.dal\\dal\\database\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|solutionrelative:02.dal\\dal\\database\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\buildermvc\\views\\team\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|solutionrelative:buildermvc\\views\\team\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\03.bll\\bll\\concrete\\homeslidermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|solutionrelative:03.bll\\bll\\concrete\\homeslidermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\buildermvc\\views\\service\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|solutionrelative:buildermvc\\views\\service\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\buildermvc\\views\\service\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|solutionrelative:buildermvc\\views\\service\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\buildermvc\\views\\about\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|solutionrelative:buildermvc\\views\\about\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\buildermvc\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|solutionrelative:buildermvc\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\buildermvc\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|solutionrelative:buildermvc\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\buildermvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|solutionrelative:buildermvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\buildermvc\\views\\shared\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|solutionrelative:buildermvc\\views\\shared\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\buildermvc\\views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|solutionrelative:buildermvc\\views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\buildermvc\\views\\project\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|solutionrelative:buildermvc\\views\\project\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\buildermvc\\views\\project\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|solutionrelative:buildermvc\\views\\project\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\buildermvc\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|solutionrelative:buildermvc\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\buildermvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|solutionrelative:buildermvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\buildermvc\\views\\contact\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|solutionrelative:buildermvc\\views\\contact\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\buildermvc\\views\\blog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|solutionrelative:buildermvc\\views\\blog\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\buildermvc\\views\\blog\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|solutionrelative:buildermvc\\views\\blog\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Migrations\\20260114172720_InitialMig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:02.DAL\\DAL\\Migrations\\20260114172720_InitialMig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\02.dal\\dal\\database\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|solutionrelative:02.dal\\dal\\database\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\buildermvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|solutionrelative:buildermvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\02.dal\\dal\\migrations\\20260114083314_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|solutionrelative:02.dal\\dal\\migrations\\20260114083314_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\buildermvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DEA2B07A-A7C4-4F6F-B252-AB84C2C6D310}|BuilderMVC\\BuilderMVC.csproj|solutionrelative:buildermvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Migrations\\20260114124853_SecondMig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:02.DAL\\DAL\\Migrations\\20260114124853_SecondMig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\02.dal\\dal\\concrete\\homesliderdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|solutionrelative:02.dal\\dal\\concrete\\homesliderdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A42F7B-BB0F-C892-17D4-7A4992AAC4E9}|00.Core\\Core\\Core.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\00.core\\core\\concrete\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57A42F7B-BB0F-C892-17D4-7A4992AAC4E9}|00.Core\\Core\\Core.csproj|solutionrelative:00.core\\core\\concrete\\baserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\03.bll\\bll\\concrete\\teammembermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|solutionrelative:03.bll\\bll\\concrete\\teammembermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\02.dal\\dal\\concrete\\teammemberdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|solutionrelative:02.dal\\dal\\concrete\\teammemberdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\03.bll\\bll\\concrete\\teamcategorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|solutionrelative:03.bll\\bll\\concrete\\teamcategorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\02.dal\\dal\\concrete\\teamcategorydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|solutionrelative:02.dal\\dal\\concrete\\teamcategorydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\03.bll\\bll\\concrete\\sitesettingsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|solutionrelative:03.bll\\bll\\concrete\\sitesettingsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\02.dal\\dal\\concrete\\sitesettingsdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|solutionrelative:02.dal\\dal\\concrete\\sitesettingsdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\03.bll\\bll\\concrete\\servicemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|solutionrelative:03.bll\\bll\\concrete\\servicemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\02.dal\\dal\\concrete\\servicedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|solutionrelative:02.dal\\dal\\concrete\\servicedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\03.bll\\bll\\concrete\\servicecategorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|solutionrelative:03.bll\\bll\\concrete\\servicecategorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\02.dal\\dal\\concrete\\servicecategorydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|solutionrelative:02.dal\\dal\\concrete\\servicecategorydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\03.bll\\bll\\concrete\\projectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|solutionrelative:03.bll\\bll\\concrete\\projectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\02.dal\\dal\\concrete\\projectdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|solutionrelative:02.dal\\dal\\concrete\\projectdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\03.bll\\bll\\concrete\\projectcategorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|solutionrelative:03.bll\\bll\\concrete\\projectcategorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\02.dal\\dal\\concrete\\projectcategorydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|solutionrelative:02.dal\\dal\\concrete\\projectcategorydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\03.bll\\bll\\concrete\\pagebannermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|solutionrelative:03.bll\\bll\\concrete\\pagebannermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\02.dal\\dal\\concrete\\pagebannerdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|solutionrelative:02.dal\\dal\\concrete\\pagebannerdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\03.bll\\bll\\concrete\\homeslidermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|solutionrelative:03.bll\\bll\\concrete\\homeslidermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\02.dal\\dal\\concrete\\contactsubmissiondal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|solutionrelative:02.dal\\dal\\concrete\\contactsubmissiondal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\03.bll\\bll\\concrete\\contactsubmissionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|solutionrelative:03.bll\\bll\\concrete\\contactsubmissionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\03.bll\\bll\\concrete\\blogpostmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|solutionrelative:03.bll\\bll\\concrete\\blogpostmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\02.dal\\dal\\concrete\\blogpostdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|solutionrelative:02.dal\\dal\\concrete\\blogpostdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\02.dal\\dal\\concrete\\blogcategorydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|solutionrelative:02.dal\\dal\\concrete\\blogcategorydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\03.bll\\bll\\concrete\\blogcategorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|solutionrelative:03.bll\\bll\\concrete\\blogcategorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\03.bll\\bll\\concrete\\aboutmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E6CD71E-27CB-DF34-DA9D-408973630D43}|03.BLL\\BLL\\BLL.csproj|solutionrelative:03.bll\\bll\\concrete\\aboutmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\02.dal\\dal\\concrete\\aboutdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5A45A53-6A15-657D-5AF5-AF6BC4425D32}|02.DAL\\DAL\\DAL.csproj|solutionrelative:02.dal\\dal\\concrete\\aboutdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57A42F7B-BB0F-C892-17D4-7A4992AAC4E9}|00.Core\\Core\\Core.csproj|c:\\users\\orkhan\\desktop\\orkhan\\csharp\\finalproject\\builder\\builder\\00.core\\core\\abstract\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57A42F7B-BB0F-C892-17D4-7A4992AAC4E9}|00.Core\\Core\\Core.csproj|solutionrelative:00.core\\core\\abstract\\ibaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +206,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,54 +219,609 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "HomeSliderManager.cs",
-              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\HomeSliderManager.cs",
-              "RelativeDocumentMoniker": "03.BLL\\BLL\\Concrete\\HomeSliderManager.cs",
-              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\HomeSliderManager.cs",
-              "RelativeToolTip": "03.BLL\\BLL\\Concrete\\HomeSliderManager.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAcwFsAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T08:34:47.253Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Program.cs",
-              "RelativeDocumentMoniker": "BuilderMVC\\Program.cs",
-              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Program.cs",
-              "RelativeToolTip": "BuilderMVC\\Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T08:38:04.419Z",
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Service\\Detail.cshtml",
+              "RelativeDocumentMoniker": "BuilderMVC\\Views\\Service\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Service\\Detail.cshtml",
+              "RelativeToolTip": "BuilderMVC\\Views\\Service\\Detail.cshtml",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAIwEYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-14T17:52:47.002Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Team\\Index.cshtml",
+              "RelativeDocumentMoniker": "BuilderMVC\\Views\\Team\\Index.cshtml",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Team\\Index.cshtml",
+              "RelativeToolTip": "BuilderMVC\\Views\\Team\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-14T17:31:14.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "BuilderMVC\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "BuilderMVC\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-14T17:31:11.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "BuilderMVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "BuilderMVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-14T17:31:10.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "BuilderMVC\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "BuilderMVC\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-14T17:31:09.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Header.cshtml",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Shared\\_Header.cshtml",
+              "RelativeDocumentMoniker": "BuilderMVC\\Views\\Shared\\_Header.cshtml",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Shared\\_Header.cshtml",
+              "RelativeToolTip": "BuilderMVC\\Views\\Shared\\_Header.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-14T17:31:08.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Footer.cshtml",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Shared\\_Footer.cshtml",
+              "RelativeDocumentMoniker": "BuilderMVC\\Views\\Shared\\_Footer.cshtml",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Shared\\_Footer.cshtml",
+              "RelativeToolTip": "BuilderMVC\\Views\\Shared\\_Footer.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-14T17:31:07.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Service\\Index.cshtml",
+              "RelativeDocumentMoniker": "BuilderMVC\\Views\\Service\\Index.cshtml",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Service\\Index.cshtml",
+              "RelativeToolTip": "BuilderMVC\\Views\\Service\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-14T17:31:05.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Project\\Index.cshtml",
+              "RelativeDocumentMoniker": "BuilderMVC\\Views\\Project\\Index.cshtml",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Project\\Index.cshtml",
+              "RelativeToolTip": "BuilderMVC\\Views\\Project\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-14T17:31:02.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\About\\Index.cshtml",
+              "RelativeDocumentMoniker": "BuilderMVC\\Views\\About\\Index.cshtml",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\About\\Index.cshtml",
+              "RelativeToolTip": "BuilderMVC\\Views\\About\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-14T17:30:47.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Project\\Detail.cshtml",
+              "RelativeDocumentMoniker": "BuilderMVC\\Views\\Project\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Project\\Detail.cshtml",
+              "RelativeToolTip": "BuilderMVC\\Views\\Project\\Detail.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-14T17:31:01.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "BuilderMVC\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "BuilderMVC\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-14T17:30:55.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "BuilderMVC\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "BuilderMVC\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-14T17:30:54.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Contact\\Index.cshtml",
+              "RelativeDocumentMoniker": "BuilderMVC\\Views\\Contact\\Index.cshtml",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Contact\\Index.cshtml",
+              "RelativeToolTip": "BuilderMVC\\Views\\Contact\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-14T17:30:52.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Blog\\Index.cshtml",
+              "RelativeDocumentMoniker": "BuilderMVC\\Views\\Blog\\Index.cshtml",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Blog\\Index.cshtml",
+              "RelativeToolTip": "BuilderMVC\\Views\\Blog\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-14T17:30:51.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Blog\\Detail.cshtml",
+              "RelativeDocumentMoniker": "BuilderMVC\\Views\\Blog\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Views\\Blog\\Detail.cshtml",
+              "RelativeToolTip": "BuilderMVC\\Views\\Blog\\Detail.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-14T17:30:50.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "20260114172720_InitialMig.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Migrations\\20260114172720_InitialMig.cs",
+              "RelativeDocumentMoniker": "02.DAL\\DAL\\Migrations\\20260114172720_InitialMig.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Migrations\\20260114172720_InitialMig.cs",
+              "RelativeToolTip": "02.DAL\\DAL\\Migrations\\20260114172720_InitialMig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T17:27:20.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "20260114124853_SecondMig.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Migrations\\20260114124853_SecondMig.cs",
+              "RelativeDocumentMoniker": "02.DAL\\DAL\\Migrations\\20260114124853_SecondMig.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Migrations\\20260114124853_SecondMig.cs",
+              "RelativeToolTip": "02.DAL\\DAL\\Migrations\\20260114124853_SecondMig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T12:48:53.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "TeamMemberDAL.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\TeamMemberDAL.cs",
+              "RelativeDocumentMoniker": "02.DAL\\DAL\\Concrete\\TeamMemberDAL.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\TeamMemberDAL.cs",
+              "RelativeToolTip": "02.DAL\\DAL\\Concrete\\TeamMemberDAL.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAADwvy8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T11:23:02.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ServiceDAL.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\ServiceDAL.cs",
+              "RelativeDocumentMoniker": "02.DAL\\DAL\\Concrete\\ServiceDAL.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\ServiceDAL.cs",
+              "RelativeToolTip": "02.DAL\\DAL\\Concrete\\ServiceDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T11:22:46.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "HomeSliderDAL.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\HomeSliderDAL.cs",
+              "RelativeDocumentMoniker": "02.DAL\\DAL\\Concrete\\HomeSliderDAL.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\HomeSliderDAL.cs",
+              "RelativeToolTip": "02.DAL\\DAL\\Concrete\\HomeSliderDAL.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAzwB4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T11:21:49.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "BaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\00.Core\\Core\\Concrete\\BaseRepository.cs",
+              "RelativeDocumentMoniker": "00.Core\\Core\\Concrete\\BaseRepository.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\00.Core\\Core\\Concrete\\BaseRepository.cs",
+              "RelativeToolTip": "00.Core\\Core\\Concrete\\BaseRepository.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowDQAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T09:07:23.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Database\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "02.DAL\\DAL\\Database\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Database\\ApplicationDbContext.cs",
               "RelativeToolTip": "02.DAL\\DAL\\Database\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAuwDkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-14T08:36:08.335Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "20260114083314_Initial.cs",
-              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Migrations\\20260114083314_Initial.cs",
-              "RelativeDocumentMoniker": "02.DAL\\DAL\\Migrations\\20260114083314_Initial.cs",
-              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Migrations\\20260114083314_Initial.cs",
-              "RelativeToolTip": "02.DAL\\DAL\\Migrations\\20260114083314_Initial.cs",
-              "ViewState": "AgIAAI4AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 18,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Program.cs",
+              "RelativeDocumentMoniker": "BuilderMVC\\Program.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\Program.cs",
+              "RelativeToolTip": "BuilderMVC\\Program.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-14T08:33:14.955Z",
+              "WhenOpened": "2026-01-14T08:38:04.419Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\appsettings.json",
+              "RelativeDocumentMoniker": "BuilderMVC\\appsettings.json",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\BuilderMVC\\appsettings.json",
+              "RelativeToolTip": "BuilderMVC\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-01-14T08:56:08.287Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "TeamCategoryDAL.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\TeamCategoryDAL.cs",
+              "RelativeDocumentMoniker": "02.DAL\\DAL\\Concrete\\TeamCategoryDAL.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\TeamCategoryDAL.cs",
+              "RelativeToolTip": "02.DAL\\DAL\\Concrete\\TeamCategoryDAL.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAkwAgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T11:23:03.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "SiteSettingsDAL.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\SiteSettingsDAL.cs",
+              "RelativeDocumentMoniker": "02.DAL\\DAL\\Concrete\\SiteSettingsDAL.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\SiteSettingsDAL.cs",
+              "RelativeToolTip": "02.DAL\\DAL\\Concrete\\SiteSettingsDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T11:22:53.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ServiceManager.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\ServiceManager.cs",
+              "RelativeDocumentMoniker": "03.BLL\\BLL\\Concrete\\ServiceManager.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\ServiceManager.cs",
+              "RelativeToolTip": "03.BLL\\BLL\\Concrete\\ServiceManager.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAswH8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T12:28:57.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "SiteSettingsManager.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\SiteSettingsManager.cs",
+              "RelativeDocumentMoniker": "03.BLL\\BLL\\Concrete\\SiteSettingsManager.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\SiteSettingsManager.cs",
+              "RelativeToolTip": "03.BLL\\BLL\\Concrete\\SiteSettingsManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T12:30:51.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TeamMemberManager.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\TeamMemberManager.cs",
+              "RelativeDocumentMoniker": "03.BLL\\BLL\\Concrete\\TeamMemberManager.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\TeamMemberManager.cs",
+              "RelativeToolTip": "03.BLL\\BLL\\Concrete\\TeamMemberManager.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAQwG4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T12:33:51.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ServiceCategoryManager.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\ServiceCategoryManager.cs",
+              "RelativeDocumentMoniker": "03.BLL\\BLL\\Concrete\\ServiceCategoryManager.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\ServiceCategoryManager.cs",
+              "RelativeToolTip": "03.BLL\\BLL\\Concrete\\ServiceCategoryManager.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAswHwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T12:27:11.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "TeamCategoryManager.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\TeamCategoryManager.cs",
+              "RelativeDocumentMoniker": "03.BLL\\BLL\\Concrete\\TeamCategoryManager.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\TeamCategoryManager.cs",
+              "RelativeToolTip": "03.BLL\\BLL\\Concrete\\TeamCategoryManager.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAswHoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T12:32:16.514Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ProjectManager.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\ProjectManager.cs",
+              "RelativeDocumentMoniker": "03.BLL\\BLL\\Concrete\\ProjectManager.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\ProjectManager.cs",
+              "RelativeToolTip": "03.BLL\\BLL\\Concrete\\ProjectManager.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAowHwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T12:22:52.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ProjectDAL.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\ProjectDAL.cs",
+              "RelativeDocumentMoniker": "02.DAL\\DAL\\Concrete\\ProjectDAL.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\ProjectDAL.cs",
+              "RelativeToolTip": "02.DAL\\DAL\\Concrete\\ProjectDAL.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwB4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T11:22:24.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ProjectCategoryManager.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\ProjectCategoryManager.cs",
+              "RelativeDocumentMoniker": "03.BLL\\BLL\\Concrete\\ProjectCategoryManager.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\ProjectCategoryManager.cs",
+              "RelativeToolTip": "03.BLL\\BLL\\Concrete\\ProjectCategoryManager.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAswHoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T12:20:07.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ProjectCategoryDAL.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\ProjectCategoryDAL.cs",
+              "RelativeDocumentMoniker": "02.DAL\\DAL\\Concrete\\ProjectCategoryDAL.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\ProjectCategoryDAL.cs",
+              "RelativeToolTip": "02.DAL\\DAL\\Concrete\\ProjectCategoryDAL.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAkwBwAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T11:22:11.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ServiceCategoryDAL.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\ServiceCategoryDAL.cs",
+              "RelativeDocumentMoniker": "02.DAL\\DAL\\Concrete\\ServiceCategoryDAL.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\ServiceCategoryDAL.cs",
+              "RelativeToolTip": "02.DAL\\DAL\\Concrete\\ServiceCategoryDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T11:22:35.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "PageBannerManager.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\PageBannerManager.cs",
+              "RelativeDocumentMoniker": "03.BLL\\BLL\\Concrete\\PageBannerManager.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\PageBannerManager.cs",
+              "RelativeToolTip": "03.BLL\\BLL\\Concrete\\PageBannerManager.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAkwFoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T11:44:08.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "PageBannerDAL.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\PageBannerDAL.cs",
+              "RelativeDocumentMoniker": "02.DAL\\DAL\\Concrete\\PageBannerDAL.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\PageBannerDAL.cs",
+              "RelativeToolTip": "02.DAL\\DAL\\Concrete\\PageBannerDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T11:22:01.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "HomeSliderManager.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\HomeSliderManager.cs",
+              "RelativeDocumentMoniker": "03.BLL\\BLL\\Concrete\\HomeSliderManager.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\HomeSliderManager.cs",
+              "RelativeToolTip": "03.BLL\\BLL\\Concrete\\HomeSliderManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T08:34:47.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "ContactSubmissionDAL.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\ContactSubmissionDAL.cs",
+              "RelativeDocumentMoniker": "02.DAL\\DAL\\Concrete\\ContactSubmissionDAL.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\ContactSubmissionDAL.cs",
+              "RelativeToolTip": "02.DAL\\DAL\\Concrete\\ContactSubmissionDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T11:21:30.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ContactSubmissionManager.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\ContactSubmissionManager.cs",
+              "RelativeDocumentMoniker": "03.BLL\\BLL\\Concrete\\ContactSubmissionManager.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\ContactSubmissionManager.cs",
+              "RelativeToolTip": "03.BLL\\BLL\\Concrete\\ContactSubmissionManager.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAADwv2oAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T11:49:11.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "BlogPostManager.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\BlogPostManager.cs",
+              "RelativeDocumentMoniker": "03.BLL\\BLL\\Concrete\\BlogPostManager.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\BlogPostManager.cs",
+              "RelativeToolTip": "03.BLL\\BLL\\Concrete\\BlogPostManager.cs",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAswJAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T11:44:09.428Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "BlogPostDAL.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\BlogPostDAL.cs",
+              "RelativeDocumentMoniker": "02.DAL\\DAL\\Concrete\\BlogPostDAL.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\BlogPostDAL.cs",
+              "RelativeToolTip": "02.DAL\\DAL\\Concrete\\BlogPostDAL.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAswE0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T11:20:27.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "BlogCategoryDAL.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\BlogCategoryDAL.cs",
+              "RelativeDocumentMoniker": "02.DAL\\DAL\\Concrete\\BlogCategoryDAL.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\BlogCategoryDAL.cs",
+              "RelativeToolTip": "02.DAL\\DAL\\Concrete\\BlogCategoryDAL.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvw8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T09:11:57.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "BlogCategoryManager.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\BlogCategoryManager.cs",
+              "RelativeDocumentMoniker": "03.BLL\\BLL\\Concrete\\BlogCategoryManager.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\BlogCategoryManager.cs",
+              "RelativeToolTip": "03.BLL\\BLL\\Concrete\\BlogCategoryManager.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAcwH4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T11:40:00.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "AboutManager.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\AboutManager.cs",
+              "RelativeDocumentMoniker": "03.BLL\\BLL\\Concrete\\AboutManager.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\03.BLL\\BLL\\Concrete\\AboutManager.cs",
+              "RelativeToolTip": "03.BLL\\BLL\\Concrete\\AboutManager.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAmwFsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T11:36:39.903Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "AboutDAL.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\AboutDAL.cs",
+              "RelativeDocumentMoniker": "02.DAL\\DAL\\Concrete\\AboutDAL.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\02.DAL\\DAL\\Concrete\\AboutDAL.cs",
+              "RelativeToolTip": "02.DAL\\DAL\\Concrete\\AboutDAL.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T09:11:47.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "IBaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\00.Core\\Core\\Abstract\\IBaseRepository.cs",
+              "RelativeDocumentMoniker": "00.Core\\Core\\Abstract\\IBaseRepository.cs",
+              "ToolTip": "C:\\Users\\orkhan\\Desktop\\Orkhan\\CSharp\\FinalProject\\Builder\\Builder\\00.Core\\Core\\Abstract\\IBaseRepository.cs",
+              "RelativeToolTip": "00.Core\\Core\\Abstract\\IBaseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T09:07:53.864Z"
             }
           ]
         }

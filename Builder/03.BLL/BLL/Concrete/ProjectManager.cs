@@ -109,30 +109,19 @@ namespace BLL.Concrete
 
         public IDataResult<ProjectDetailDto> GetByIdWithCategory(int id)
         {
-            using (ApplicationDbContext context = new())
-            {
-                var project = context.Projects
-                    .Include(x => x.ProjectCategory)
-                    .FirstOrDefault(x => x.Id == id && x.Deleted == 0);
+            
+            var project = _projectDal.GetByIdWithCategory(id);
 
-                if (project is null)
-                    return new ErrorDataResult<ProjectDetailDto>("Project not found");
+            if (project is null)
+                return new ErrorDataResult<ProjectDetailDto>("Project not found");
 
-                return new SuccessDataResult<ProjectDetailDto>(_mapper.Map<ProjectDetailDto>(project));
-            }
+            return new SuccessDataResult<ProjectDetailDto>(_mapper.Map<ProjectDetailDto>(project));
         }
 
         public IDataResult<List<ProjectDto>> GetAllWithCategory()
         {
-            using (ApplicationDbContext context = new())
-            {
-                var projects = context.Projects
-                    .Include(x => x.ProjectCategory)
-                    .Where(x => x.Deleted == 0)
-                    .ToList();
-
-                return new SuccessDataResult<List<ProjectDto>>(_mapper.Map<List<ProjectDto>>(projects));
-            }
+            var projects = _projectDal.GetAllWithCategory();
+            return new SuccessDataResult<List<ProjectDto>>(_mapper.Map<List<ProjectDto>>(projects));
         }
 
         private IResult DuplicateProjectTitle(Project project)

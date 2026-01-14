@@ -12,12 +12,15 @@ namespace DAL.Concrete
 {
     public class SiteSettingsDAL : BaseRepository<SiteSettings, ApplicationDbContext>, ISiteSettingsDAL
     {
-        public SiteSettings GetCurrentSettings()
+        private readonly ApplicationDbContext _context;
+        public SiteSettingsDAL(ApplicationDbContext context) : base(context)
         {
-            using (ApplicationDbContext context = new())
-            {
-                return context.SiteSettings.FirstOrDefault();
-            }
+            _context = context;
+        }
+
+        public SiteSettings GetCurrentSettings()
+        {            
+            return _context.SiteSettings.FirstOrDefault(x => x.Deleted == 0);
         }
     }
 }

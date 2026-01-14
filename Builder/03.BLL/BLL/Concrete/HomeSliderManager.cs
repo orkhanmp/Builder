@@ -81,20 +81,15 @@ namespace BLL.Concrete
 
         public IDataResult<List<HomeSliderDto>> GetActiveSliders()
         {
-            var homeSliders = _homeSliderDal.GetAll(x => x.IsActive && x.Deleted == 0);
+            var homeSliders = _homeSliderDal.GetActiveSliders();
             return new SuccessDataResult<List<HomeSliderDto>>(_mapper.Map<List<HomeSliderDto>>(homeSliders));
         }
 
         public IDataResult<List<HomeSliderDto>> GetByDisplayOrder()
         {
-            using (ApplicationDbContext context = new())
-            {
-                var homeSliders = context.HomeSliders
-                    .Where(x => x.IsActive && x.Deleted == 0)
-                    .OrderBy(x => x.Order)
-                    .ToList();
-                return new SuccessDataResult<List<HomeSliderDto>>(_mapper.Map<List<HomeSliderDto>>(homeSliders));
-            }
+            
+            var homeSliders = _homeSliderDal.GetByDisplayOrder();
+            return new SuccessDataResult<List<HomeSliderDto>>(_mapper.Map<List<HomeSliderDto>>(homeSliders));
         }
     }
 }

@@ -1,5 +1,56 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<TeamMemberDto>
 @{
+    ViewBag.Title = "Our Team";
+    var banner = ViewBag.Banner as PageBannerDto;
 }
+
+<!-- Page Header Start -->
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>@(banner?.Title ?? "Our Team")</h2>
+            </div>
+            <div class="col-12">
+                <a asp-controller="Home" asp-action="Index">Home</a>
+                <a href="">@(banner?.Title ?? "Team")</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+<!-- Team Start -->
+<div class="team">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>Our Team</p>
+            <h2>Meet Our Engineer</h2>
+        </div>
+        @if (Model != null && Model.Any())
+        {
+            <div class="row">
+                @foreach (var member in Model)
+                {
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="~/@member.ImageUrl" alt="@member.FullName">
+                            </div>
+                            <div class="team-text">
+                                <h2>@member.FullName</h2>
+                                <p>@member.Position</p>
+                            </div>                            
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-info text-center">
+                <h4>No team members available at the moment.</h4>
+            </div>
+        }
+    </div>
+</div>
+<!-- Team End -->

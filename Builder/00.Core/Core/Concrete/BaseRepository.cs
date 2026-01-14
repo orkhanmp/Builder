@@ -12,54 +12,55 @@ namespace Core.Concrete
 {
     public class BaseRepository<T, TContext> : IBaseRepository<T>
         where T : BaseEntity, new()
-        where TContext : DbContext, new()
+        where TContext : DbContext
     {
+
+        protected readonly TContext _context;
+        public BaseRepository(TContext context)
+        {
+            _context = context;
+        }
         public void Add(T entity)
         {
-            using (TContext context = new())
-            {
-                var entityAdded = context.Entry(entity);
+            
+                var entityAdded = _context.Entry(entity);
                 entityAdded.State = EntityState.Added;
-                context.SaveChanges();
-            }
+                _context.SaveChanges();
+            
         }
 
         public void Delete(T entity)
         {
-            using (TContext context = new())
-            {
-                var entityDelete = context.Entry(entity);
+           
+                var entityDelete = _context.Entry(entity);
                 entityDelete.State = EntityState.Deleted;
-                context.SaveChanges();
-            }
+                _context.SaveChanges();
+            
         }
 
         public T Get(Expression<Func<T, bool>> predicate)
         {
-            using (TContext context = new())
-            {
-                return context.Set<T>().FirstOrDefault(predicate);
-            }
+           
+                return _context.Set<T>().FirstOrDefault(predicate);
+            
         }
 
         public List<T> GetAll(Expression<Func<T, bool>> predicate = null)
         {
-            using (TContext context = new())
-            {
+            
                 return predicate is null
-                    ? context.Set<T>().ToList()
-                    : context.Set<T>().Where(predicate).ToList();
-            }
+                    ? _context.Set<T>().ToList()
+                    : _context.Set<T>().Where(predicate).ToList();
+            
         }
 
         public void Update(T entity)
         {
-            using (TContext context = new())
-            {
-                var entityUpdate = context.Entry(entity);
+            
+                var entityUpdate = _context.Entry(entity);
                 entityUpdate.State = EntityState.Modified;
-                context.SaveChanges();
-            }
+                _context.SaveChanges();
+            
         }
     }
 }
