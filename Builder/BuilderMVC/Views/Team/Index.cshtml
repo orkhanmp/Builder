@@ -1,7 +1,10 @@
-﻿@model List<TeamMemberDto>
+﻿@using Entities.DTOs.ContentDTO.TeamCategoryDTOs
+@model List<TeamMemberDto>
 @{
     ViewBag.Title = "Our Team";
     var banner = ViewBag.Banner as PageBannerDto;
+    var categories = ViewBag.Categories as List<TeamCategoryDto>;
+    var selectedCategoryId = ViewBag.SelectedCategoryId as int?;
 }
 
 <!-- Page Header Start -->
@@ -26,6 +29,26 @@
             <p>Our Team</p>
             <h2>Meet Our Engineer</h2>
         </div>
+
+        @if (categories != null && categories.Any())
+        {
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <ul id="portfolio-flters">
+                        <li class="@(selectedCategoryId == null ? "filter-active" : "")">
+                            <a asp-action="Index">All</a>
+                        </li>
+                        @foreach (var category in categories)
+                        {
+                            <li class="@(selectedCategoryId == category.Id ? "filter-active" : "")">
+                                <a asp-action="Index" asp-route-categoryId="@category.Id">@category.Name</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        }
+
         @if (Model != null && Model.Any())
         {
             <div class="row">

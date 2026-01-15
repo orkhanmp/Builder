@@ -1,0 +1,133 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<!-- Content Row -->
+<div class="row">
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Services</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">@ViewBag.ServiceCount</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-tools fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Team Members</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">@ViewBag.TeamMemberCount</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-users fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-info shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Projects</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">@ViewBag.ProjectCount</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-project-diagram fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Unread Messages</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">@ViewBag.UnreadMessages</div>
+                    </div>
+                    <div class="col-auto">
+                        <i class="fas fa-envelope fa-2x text-gray-300"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Content Row -->
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Quick Actions</h6>
+            </div>
+            <div class="card-body">
+                <a asp-controller="HomeSlider" asp-action="Create" class="btn btn-primary btn-icon-split mb-2 btn-block">
+                    <span class="icon text-white-50">
+                        <i class="fas fa-plus"></i>
+                    </span>
+                    <span class="text">Add New Slider</span>
+                </a>
+                <a asp-controller="Service" asp-action="Create" class="btn btn-success btn-icon-split mb-2 btn-block">
+                    <span class="icon text-white-50">
+                        <i class="fas fa-plus"></i>
+                    </span>
+                    <span class="text">Add New Service</span>
+                </a>
+                <a asp-controller="Project" asp-action="Create" class="btn btn-info btn-icon-split mb-2 btn-block">
+                    <span class="icon text-white-50">
+                        <i class="fas fa-plus"></i>
+                    </span>
+                    <span class="text">Add New Project</span>
+                </a>
+                <a asp-controller="BlogPost" asp-action="Create" class="btn btn-warning btn-icon-split btn-block">
+                    <span class="icon text-white-50">
+                        <i class="fas fa-plus"></i>
+                    </span>
+                    <span class="text">Add New Blog Post</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Statistics</h6>
+            </div>
+            <div class="card-body">
+                <h4 class="small font-weight-bold">Services <span class="float-right">@ViewBag.ServiceCount</span></h4>
+                <div class="progress mb-4">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 80%"></div>
+                </div>
+                <h4 class="small font-weight-bold">Team Members <span class="float-right">@ViewBag.TeamMemberCount</span></h4>
+                <div class="progress mb-4">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 60%"></div>
+                </div>
+                <h4 class="small font-weight-bold">Projects <span class="float-right">@ViewBag.ProjectCount</span></h4>
+                <div class="progress mb-4">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 70%"></div>
+                </div>
+                <h4 class="small font-weight-bold">Blog Posts <span class="float-right">@ViewBag.BlogPostCount</span></h4>
+                <div class="progress">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 50%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

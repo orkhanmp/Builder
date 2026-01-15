@@ -1,5 +1,110 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model ProjectDetailDto
 @{
+    ViewBag.Title = Model?.Title ?? "Project Detail";
+    var relatedProjects = ViewBag.RelatedProjects as List<ProjectDto>;
 }
+
+<!-- Page Header Start -->
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>@Model.Title</h2>
+            </div>
+            <div class="col-12">
+                <a asp-controller="Home" asp-action="Index">Home</a>
+                <a asp-controller="Project" asp-action="Index">Projects</a>
+                <a href="">@Model.Title</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+<!-- Project Detail Start -->
+<div class="single">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="single-content wow fadeInUp">
+                    <img src="~/@Model.MainImageUrl" alt="@Model.Title" class="img-fluid mb-4">
+                    <h2>@Model.Title</h2>
+                    <div class="project-meta mb-4">
+                        @if (!string.IsNullOrEmpty(Model.ProjectCategoryName))
+                        {
+                            <p><strong>Category:</strong> @Model.ProjectCategoryName</p>
+                        }
+                        @if (!string.IsNullOrEmpty(Model.Location))
+                        {
+                            <p><strong>Location:</strong> @Model.Location</p>
+                        }
+                        @if (!string.IsNullOrEmpty(Model.ClientName))
+                        {
+                            <p><strong>Client:</strong> @Model.ClientName</p>
+                        }
+                        @if (Model.StartDate.HasValue)
+                        {
+                            <p><strong>Start Date:</strong> @Model.StartDate.Value.ToString("MMMM dd, yyyy")</p>
+                        }
+                        @if (Model.EndDate.HasValue)
+                        {
+                            <p><strong>End Date:</strong> @Model.EndDate.Value.ToString("MMMM dd, yyyy")</p>
+                        }
+                        @if (!string.IsNullOrEmpty(Model.Status))
+                        {
+                            <p><strong>Status:</strong> <span class="badge badge-primary">@Model.Status</span></p>
+                        }
+                    </div>
+                    <div class="project-description">
+                        @Html.Raw(Model.DetailedDescription)
+                    </div>
+
+                    @if (Model.GalleryImages != null && Model.GalleryImages.Any())
+                    {
+                        <div class="project-gallery mt-5">
+                            <h3>Project Gallery</h3>
+                            <div class="row">
+                                @foreach (var image in Model.GalleryImages)
+                                {
+                                    <div class="col-md-4 mb-3">
+                                        <a href="~/@image" data-lightbox="gallery">
+                                            <img src="~/@image" alt="Gallery Image" class="img-fluid">
+                                        </a>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar">
+                    @if (relatedProjects != null && relatedProjects.Any())
+                    {
+                        <div class="sidebar-widget">
+                            <h3>Related Projects</h3>
+                            @foreach (var project in relatedProjects)
+                            {
+                                <div class="recent-post mb-3">
+                                    <div class="post-img">
+                                        <img src="~/@project.MainImageUrl" alt="@project.Title">
+                                    </div>
+                                    <div class="post-text">
+                                        <a asp-action="Detail" asp-route-id="@project.Id">@project.Title</a>
+                                        <div class="post-meta">
+                                            <p>@project.ProjectCategoryName</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                    <div class="sidebar-widget mt-4">
+                        <h3>Start Your Project</h3>
+                        <a asp-controller="Contact" asp-action="Index" class="btn btn-primary btn-block">Get A Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Project Detail End -->

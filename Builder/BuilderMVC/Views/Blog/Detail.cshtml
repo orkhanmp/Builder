@@ -1,5 +1,118 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using Entities.DTOs.ContentDTO.BlogCategoryDTOs
+@model BlogPostDetailDto
 @{
+    ViewBag.Title = Model?.Title ?? "Blog Post";
+    var recentPosts = ViewBag.RecentPosts as List<BlogPostDto>;
+    var categories = ViewBag.Categories as List<BlogCategoryDto>;
 }
+
+<!-- Page Header Start -->
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>@Model.Title</h2>
+            </div>
+            <div class="col-12">
+                <a asp-controller="Home" asp-action="Index">Home</a>
+                <a asp-controller="Blog" asp-action="Index">Blog</a>
+                <a href="">@Model.Title</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+<!-- Single Post Start -->
+<div class="single">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="single-content wow fadeInUp">
+                    <img src="~/@Model.FeaturedImageUrl" alt="@Model.Title" class="img-fluid mb-4">
+                    <h2>@Model.Title</h2>
+                    <div class="single-bio mb-4">
+                        <div class="single-bio-img">
+                            <img src="~/@Model.AuthorImageUrl" alt="@Model.AuthorName">
+                        </div>
+                        <div class="single-bio-text">
+                            <h3>@Model.AuthorName</h3>
+                            <p>@Model.PublishDate.ToString("MMMM dd, yyyy")</p>
+                        </div>
+                    </div>
+                    <div class="single-meta mb-4">
+                        <span><i class="far fa-folder"></i>@Model.BlogCategoryName</span>
+                        <span><i class="far fa-eye"></i>@Model.ViewCount Views</span>
+                        <span><i class="far fa-calendar-alt"></i>@Model.PublishDate.ToString("MMM dd, yyyy")</span>
+                    </div>
+                    <div class="single-text">
+                        @Html.Raw(Model.Content)
+                    </div>
+                    @if (Model.TagList != null && Model.TagList.Any())
+                    {
+                        <div class="single-tags mt-4">
+                            <strong>Tags:</strong>
+                            @foreach (var tag in Model.TagList)
+                            {
+                                <span class="badge badge-secondary mr-2">@tag</span>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar">
+                    <div class="sidebar-widget">
+                        <div class="search-widget">
+                            <form asp-controller="Blog" asp-action="Index" method="get">
+                                <input class="form-control" name="search" type="text" placeholder="Search blog...">
+                                <button class="btn"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+
+                    @if (categories != null && categories.Any())
+                    {
+                        <div class="sidebar-widget">
+                            <h2 class="widget-title">Categories</h2>
+                            <div class="category-widget">
+                                <ul>
+                                    @foreach (var category in categories)
+                                    {
+                                        <li>
+                                            <a asp-action="Index" asp-route-categoryId="@category.Id">
+                                                @category.Name <span>(@category.PostCount)</span>
+                                            </a>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    }
+
+                    @if (recentPosts != null && recentPosts.Any())
+                    {
+                        <div class="sidebar-widget">
+                            <h2 class="widget-title">Recent Posts</h2>
+                            @foreach (var post in recentPosts)
+                            {
+                                <div class="recent-post">
+                                    <div class="post-img">
+                                        <img src="~/@post.FeaturedImageUrl" alt="@post.Title">
+                                    </div>
+                                    <div class="post-text">
+                                        <a asp-action="Detail" asp-route-slug="@post.Slug">@post.Title</a>
+                                        <div class="post-meta">
+                                            <p>By<a href="#">@post.AuthorName</a></p>
+                                            <p>In<a href="#">@post.BlogCategoryName</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Single Post End -->

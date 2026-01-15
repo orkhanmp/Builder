@@ -4,20 +4,33 @@ using Microsoft.AspNetCore.Mvc;
 public class TeamController : Controller
 {
     private readonly ITeamMemberService _teamMemberService;
+    private readonly ITeamCategoryService _teamCategoryService;
     private readonly IPageBannerService _pageBannerService;
 
-    public TeamController(ITeamMemberService teamMemberService, IPageBannerService pageBannerService)
+    public TeamController(
+        ITeamMemberService teamMemberService,
+        ITeamCategoryService teamCategoryService,
+        IPageBannerService pageBannerService)
     {
         _teamMemberService = teamMemberService;
+        _teamCategoryService = teamCategoryService;
         _pageBannerService = pageBannerService;
     }
 
-    public IActionResult Index()
+    public IActionResult Index(int? categoryId)
     {
         var banner = _pageBannerService.GetByPageName("Team");
         ViewBag.Banner = banner.Data;
 
-        var teamMembers = _teamMemberService.GetAllWithCategory();
+        var categories = _teamCategoryService.GetAll();
+        ViewBag.Categories = categories.Data;
+
+        var teamMembers = categoryId.HasValue
+            ? _teamMemberService.GetByCategoryId(categoryId.Value)
+            : _teamMemberService.GetAllWithCategory();
+
+        ViewBag.SelectedCategoryId = categoryId;
+
         return View(teamMembers.Data);
     }
 

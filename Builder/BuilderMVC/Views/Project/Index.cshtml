@@ -1,5 +1,78 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<ProjectDto>
 @{
+    ViewBag.Title = "Our Projects";
+    var banner = ViewBag.Banner as PageBannerDto;
+    var currentStatus = ViewBag.CurrentStatus as string ?? "All";
 }
+
+<!-- Page Header Start -->
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>@(banner?.Title ?? "Our Projects")</h2>
+            </div>
+            <div class="col-12">
+                <a asp-controller="Home" asp-action="Index">Home</a>
+                <a href="">@(banner?.Title ?? "Projects")</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+<!-- Portfolio Start -->
+<div class="portfolio">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>Our Projects</p>
+            <h2>Visit Our Projects</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <ul id="portfolio-flters">
+                    <li data-filter="*" class="@(currentStatus == "All" ? "filter-active" : "")">
+                        <a asp-action="Index" asp-route-status="All">All</a>
+                    </li>
+                    <li data-filter=".first" class="@(currentStatus == "Complete" ? "filter-active" : "")">
+                        <a asp-action="Index" asp-route-status="Complete">Complete</a>
+                    </li>
+                    <li data-filter=".second" class="@(currentStatus == "Running" ? "filter-active" : "")">
+                        <a asp-action="Index" asp-route-status="Running">Running</a>
+                    </li>
+                    <li data-filter=".third" class="@(currentStatus == "Upcoming" ? "filter-active" : "")">
+                        <a asp-action="Index" asp-route-status="Upcoming">Upcoming</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        @if (Model != null && Model.Any())
+        {
+            <div class="row portfolio-container">
+                @foreach (var project in Model)
+                {
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="portfolio-warp">
+                            <div class="portfolio-img">
+                                <img src="~/@project.MainImageUrl" alt="@project.Title">
+                                <div class="portfolio-overlay">
+                                    <p>@project.ShortDescription</p>
+                                </div>
+                            </div>
+                            <div class="portfolio-text">
+                                <h3>@project.Title</h3>
+                                <a class="btn" asp-action="Detail" asp-route-id="@project.Id">+</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-info text-center">
+                <h4>No projects available at the moment.</h4>
+            </div>
+        }
+    </div>
+</div>
+<!-- Portfolio End -->

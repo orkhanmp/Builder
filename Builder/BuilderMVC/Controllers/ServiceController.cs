@@ -17,12 +17,20 @@ public class ServiceController : Controller
         _pageBannerService = pageBannerService;
     }
 
-    public IActionResult Index()
+    public IActionResult Index(int? categoryId)
     {
         var banner = _pageBannerService.GetByPageName("Service");
         ViewBag.Banner = banner.Data;
 
-        var services = _serviceService.GetAllWithCategory();
+        var categories = _serviceCategoryService.GetAll();
+        ViewBag.Categories = categories.Data;
+
+        var services = categoryId.HasValue
+            ? _serviceService.GetByCategoryId(categoryId.Value)
+            : _serviceService.GetAllWithCategory();
+
+        ViewBag.SelectedCategoryId = categoryId;
+
         return View(services.Data);
     }
 

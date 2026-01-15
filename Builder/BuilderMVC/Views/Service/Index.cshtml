@@ -2,6 +2,8 @@
 @{
     ViewBag.Title = "Our Services";
     var banner = ViewBag.Banner as PageBannerDto;
+    var categories = ViewBag.Categories as List<ServiceCategoryDto>;
+    var selectedCategoryId = ViewBag.SelectedCategoryId as int?;
 }
 
 <!-- Page Header Start -->
@@ -26,6 +28,26 @@
             <p>Our Services</p>
             <h2>We Provide Services</h2>
         </div>
+
+        @if (categories != null && categories.Any())
+        {
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <ul id="portfolio-flters">
+                        <li class="@(selectedCategoryId == null ? "filter-active" : "")">
+                            <a asp-action="Index">All</a>
+                        </li>
+                        @foreach (var category in categories)
+                        {
+                            <li class="@(selectedCategoryId == category.Id ? "filter-active" : "")">
+                                <a asp-action="Index" asp-route-categoryId="@category.Id">@category.Name</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        }
+
         @if (Model != null && Model.Any())
         {
             <div class="row">

@@ -1,5 +1,106 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using Entities.DTOs.ContentDTO.BlogCategoryDTOs
+@model List<BlogPostDto>
 @{
+    ViewBag.Title = "Our Blog";
+    var banner = ViewBag.Banner as PageBannerDto;
+    var categories = ViewBag.Categories as List<BlogCategoryDto>;
+    var selectedCategoryId = ViewBag.SelectedCategoryId as int?;
+    var searchTerm = ViewBag.SearchTerm as string;
 }
+
+<!-- Page Header Start -->
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>@(banner?.Title ?? "Our Blog")</h2>
+            </div>
+            <div class="col-12">
+                <a asp-controller="Home" asp-action="Index">Home</a>
+                <a href="">@(banner?.Title ?? "Blog")</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<!-- Blog Start -->
+<div class="blog">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>Latest Blog</p>
+            <h2>Latest From Our Blog</h2>
+        </div>
+
+        <!-- Search and Filter -->
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <form asp-action="Index" method="get" class="form-inline">
+                    <input type="text" name="search" class="form-control mr-2" placeholder="Search blog posts..." value="@searchTerm" style="width: 70%;">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <select class="form-control" onchange="window.location.href='?categoryId=' + this.value">
+                    <option value="">All Categories</option>
+                    @if (categories != null)
+                    {
+                        foreach (var category in categories)
+                        {
+                            if (selectedCategoryId == category.Id)
+                            {
+                                <option value="@category.Id" selected>
+                                    @category.Name (@category.PostCount)
+                                </option>
+                            }
+                            else
+                            {
+                                <option value="@category.Id">
+                                    @category.Name (@category.PostCount)
+                                </option>
+                            }
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+
+        @if (Model != null && Model.Any())
+        {
+            <div class="row">
+                @foreach (var post in Model)
+                {
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="blog-item">
+                            <div class="blog-img">
+                                <img src="~/@post.FeaturedImageUrl" alt="@post.Title">
+                            </div>
+                            <div class="blog-title">
+                                <h3>@post.Title</h3>
+                                <a class="btn" asp-action="Detail" asp-route-slug="@post.Slug">+</a>
+                            </div>
+                            <div class="blog-meta">
+                                <p>By<a href="#">@post.AuthorName</a></p>
+                                <p>In<a href="#">@post.BlogCategoryName</a></p>
+                            </div>
+                            <div class="blog-text">
+                                <p>@post.Summary</p>
+                            </div>
+                            <div class="blog-meta">
+                                <p><i class="far fa-calendar-alt"></i>@post.PublishDate.ToString("MMM dd, yyyy")</p>
+                                <p><i class="far fa-eye"></i>@post.ViewCount Views</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-info text-center">
+                <h4>No blog posts found.</h4>
+            </div>
+        }
+    </div>
+</div>
+<!-- Blog End -->

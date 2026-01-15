@@ -1,0 +1,70 @@
+﻿@model UpdateHomeSliderDto
+@{
+    ViewData["Title"] = "Edit Slider";
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Edit Slider</h6>
+    </div>
+    <div class="card-body">
+        <form asp-action="Edit" method="post">
+            <input asp-for="Id" type="hidden" />
+
+            <div class="form-group">
+                <label asp-for="SubTitle"></label>
+                <input asp-for="SubTitle" class="form-control" />
+                <span asp-validation-for="SubTitle" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="MainHeading"></label>
+                <input asp-for="MainHeading" class="form-control" />
+                <span asp-validation-for="MainHeading" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ButtonText"></label>
+                <input asp-for="ButtonText" class="form-control" />
+                <span asp-validation-for="ButtonText" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ButtonUrl"></label>
+                <input asp-for="ButtonUrl" class="form-control" />
+                <span asp-validation-for="ButtonUrl" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="BackgroundImageUrl"></label>
+                <input asp-for="BackgroundImageUrl" class="form-control" />
+                <span asp-validation-for="BackgroundImageUrl" class="text-danger"></span>
+                <small class="form-text text-muted">Example: img/carousel-1.jpg</small>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DisplayOrder"></label>
+                <input asp-for="DisplayOrder" class="form-control" type="number" />
+                <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+            </div>
+
+            <div class="form-group form-check">
+                <input asp-for="IsActive" class="form-check-input" type="checkbox" />
+                <label asp-for="IsActive" class="form-check-label"></label>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-save"></i> Update
+                </button>
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Back to List
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

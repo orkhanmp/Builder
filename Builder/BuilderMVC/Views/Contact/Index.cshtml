@@ -1,5 +1,112 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model CreateContactSubmissionDto
 @{
+    ViewBag.Title = "Contact Us";
+    var banner = ViewBag.Banner as PageBannerDto;
+    var settings = ViewBag.Settings as SiteSettingsDto;
+}
+
+<!-- Page Header Start -->
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>@(banner?.Title ?? "Contact Us")</h2>
+            </div>
+            <div class="col-12">
+                <a asp-controller="Home" asp-action="Index">Home</a>
+                <a href="">@(banner?.Title ?? "Contact")</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+<!-- Contact Start -->
+<div class="contact wow fadeInUp">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>Get In Touch</p>
+            <h2>For Any Query</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="flaticon-address"></i>
+                        <div class="contact-text">
+                            <h2>Location</h2>
+                            <p>@(settings?.Address ?? "123 Street, New York, USA")</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="flaticon-call"></i>
+                        <div class="contact-text">
+                            <h2>Phone</h2>
+                            <p>@(settings?.Phone ?? "+012 345 67890")</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="flaticon-send-mail"></i>
+                        <div class="contact-text">
+                            <h2>Email</h2>
+                            <p>@(settings?.Email ?? "info@example.com")</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="contact-form">
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="alert alert-success alert-dismissible fade show">
+                            @TempData["Success"]
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        </div>
+                    }
+                    @if (TempData["Error"] != null)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show">
+                            @TempData["Error"]
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        </div>
+                    }
+                    <form asp-action="Index" method="post">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input type="text" asp-for="FullName" class="form-control" placeholder="Your Name" />
+                                <span asp-validation-for="FullName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="email" asp-for="Email" class="form-control" placeholder="Your Email" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" asp-for="Subject" class="form-control" placeholder="Subject" />
+                            <span asp-validation-for="Subject" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea asp-for="Message" class="form-control" rows="5" placeholder="Message"></textarea>
+                            <span asp-validation-for="Message" class="text-danger"></span>
+                        </div>
+                        <div>
+                            <button class="btn" type="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+@if (!string.IsNullOrEmpty(settings?.GoogleMapEmbedUrl))
+{
+    <!-- Map Start -->
+    <div class="contact-map">
+        <iframe src="@settings.GoogleMapEmbedUrl" frameborder="0" style="border:0; width: 100%; height: 450px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <!-- Map End -->
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
 }
